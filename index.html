@@ -1,0 +1,987 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Ahobilam Devasthanam – Sacred Abode of Nava Narasimha</title>
+  <meta name="description" content="Official portal of Ahobilam Devasthanam – home to Nava Narasimha temples in the Eastern Ghats, Andhra Pradesh." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;600;700&family=Lato:wght@300;400;700&family=Noto+Sans+Telugu:wght@400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+<!-- TOP BAR -->
+<div class="topbar">
+  <div class="topbar-inner">
+    <span>📞 Guest House: 08519-252045 &nbsp;|&nbsp; 08519-252024</span>
+    <span class="topbar-right">
+      <a href="#live-darshan">🔴 Live Darshan</a>
+      &nbsp;|&nbsp;
+      <select id="lang-select" onchange="changeLang(this.value)">
+        <option value="en">English</option>
+        <option value="te">తెలుగు</option>
+      </select>
+    </span>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header id="main-header">
+  <div class="header-inner">
+    <div class="logo-area">
+      <div class="logo-emblem">🕉</div>
+      <div class="logo-text">
+        <h1 class="site-title">Ahobilam Devasthanam</h1>
+        <p class="site-subtitle" data-en="Sacred Abode of Nava Narasimha" data-te="నవ నరసింహ పవిత్ర నివాసం">Sacred Abode of Nava Narasimha</p>
+      </div>
+    </div>
+    <nav id="main-nav">
+      <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">☰</button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#temples">Temples</a></li>
+        <li><a href="#sevas">Sevas &amp; Donations</a></li>
+        <li><a href="#visit">Plan Visit</a></li>
+        <li><a href="#trekking">Trekking</a></li>
+        <li><a href="#annadanam">Annadanam</a></li>
+        <li><a href="#heritage">Heritage</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<!-- HERO -->
+<section id="hero">
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <p class="hero-tag">108 Divya Desams · Kurnool District, Andhra Pradesh</p>
+    <h2 class="hero-title" data-en="Nava Narasimha Kshetram" data-te="నవ నరసింహ క్షేత్రం">Nava Narasimha Kshetram</h2>
+    <p class="hero-sub">Where the Lord appeared in nine divine forms amidst the sacred Eastern Ghats</p>
+    <div class="hero-buttons">
+      <a href="#temples" class="btn btn-primary">Explore Temples</a>
+      <a href="#visit" class="btn btn-outline">Plan Your Visit</a>
+    </div>
+  </div>
+  <div class="hero-scroll-hint">▼</div>
+</section>
+
+<!-- QUICK INFO STRIP -->
+<div class="quick-strip">
+  <div class="quick-item">
+    <span class="qi-icon">🕌</span>
+    <span class="qi-label">9 + 3 Temples</span>
+  </div>
+  <div class="quick-item">
+    <span class="qi-icon">🌄</span>
+    <span class="qi-label">Eastern Ghats</span>
+  </div>
+  <div class="quick-item">
+    <span class="qi-icon">⏰</span>
+    <span class="qi-label">Open Daily 6 AM – 8 PM</span>
+  </div>
+  <div class="quick-item">
+    <span class="qi-icon">🍽</span>
+    <span class="qi-label">Free Annadanam Daily</span>
+  </div>
+  <div class="quick-item">
+    <span class="qi-icon">🚐</span>
+    <span class="qi-label">Transport Available</span>
+  </div>
+</div>
+
+<!-- ABOUT -->
+<section id="about" class="section section-light">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">About the Kshetram</span>
+      <h2 class="section-title">Sri Ahobila Narasimha Swamy Devasthanam</h2>
+      <div class="divider-ornament">⸻ ✦ ⸻</div>
+    </div>
+    <div class="about-grid">
+      <div class="about-text">
+        <p>Ahobilam, also known as <strong>Ahobalam</strong> or <strong>Singavel Kundram</strong>, is one of the 108 Divya Desams celebrated by the Alvars. Nestled deep within the Nallamala Forest of the Eastern Ghats in Kurnool district, Andhra Pradesh, it is the sacred site where Lord Vishnu manifested as <strong>Narasimha</strong> — the half-lion, half-human form — to slay the demon king Hiranyakashipu and protect his devoted son Prahlada.</p>
+        <p>The Kshetram is home to the celebrated <strong>Nava Narasimha</strong> — nine distinct forms of Lord Narasimha, each enshrined in a separate temple spread across Upper Ahobilam (Garuda Kshetram) and Lower Ahobilam, separated by approximately 8 kilometres of mountain terrain.</p>
+        <p>The site reached its architectural and cultural zenith during the <strong>Vijayanagara period</strong> and has been revered for over a thousand years. References appear in 9th-century Tamil devotional literature, making it one of the most ancient living temples of South India.</p>
+        <div class="about-facts">
+          <div class="fact"><strong>District</strong><span>Kurnool, Andhra Pradesh</span></div>
+          <div class="fact"><strong>Presiding Deity</strong><span>Sri Lakshmi Narasimha Swamy</span></div>
+          <div class="fact"><strong>Divya Desam</strong><span>#19 of 108</span></div>
+          <div class="fact"><strong>Forest</strong><span>Nallamala Reserved Forest</span></div>
+        </div>
+      </div>
+      <div class="about-image-area">
+        <div class="about-image-card">
+          <div class="image-placeholder deity-art">
+            <div class="deity-symbol">🦁</div>
+            <p>Sri Narasimha Swamy</p>
+          </div>
+          <blockquote class="about-quote">
+            "Ugram Veeram Maha-Vishnum Jvalantam Sarvato Mukham<br>
+            Nrisimham Bhishanam Bhadram Mrityur-Mrityum Namamy-Aham"
+          </blockquote>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- NAVA NARASIMHA TEMPLES -->
+<section id="temples" class="section section-dark-bg">
+  <div class="container">
+    <div class="section-header light">
+      <span class="section-tag">Nava Narasimha</span>
+      <h2 class="section-title">The Nine Sacred Temples</h2>
+      <div class="divider-ornament">⸻ ✦ ⸻</div>
+      <p class="section-desc">Click on each shrine to explore its history, significance & darshan details</p>
+    </div>
+
+    <!-- 3×3 WINDOW GRID -->
+    <!-- navanarasimha.jpg is 1500×800px, 5 cols × 2 rows
+         CSS sprite: background-size:500% 200%
+         Col offsets: col0=0%, col1=25%, col2=50%, col3=75%, col4=100%
+         Row offsets: row0=0%, row1=100%
+         Layout: [Jwala|Ahobila|Kroda|Malola|Kaaranja] / [Bhargava|Yogananda|MalolanSerthi|Kshatravata|Pavana]
+    -->
+    <div class="shrine-grid">
+
+      <!-- 1. Jwala -->
+      <div class="shrine-window" onclick="openTemple(0)">
+        <div class="shrine-arch-top"></div>
+        <div class="shrine-frame">
+          <div class="shrine-img-wrap">
+            <img src="images/jwala.jpg" alt="Jwala Narasimha" loading="lazy" />
+          </div>
+          <div class="shrine-lamp"></div>
+          <div class="shrine-info">
+            <span class="shrine-num">01</span>
+            <h3>Jwala</h3>
+            <span class="shrine-area">Upper Ahobilam</span>
+          </div>
+        </div>
+        <div class="shrine-hover-overlay"><span>View History</span></div>
+      </div>
+
+      <!-- 2. Ahobila -->
+      <div class="shrine-window main-shrine" onclick="openTemple(1)">
+        <div class="shrine-arch-top"></div>
+        <div class="shrine-frame">
+          <div class="shrine-img-wrap">
+            <img src="images/ahobila.jpg" alt="Ahobila Narasimha" loading="lazy" />
+          </div>
+          <div class="shrine-lamp"></div>
+          <div class="shrine-info">
+            <span class="shrine-num">02</span>
+            <h3>Ahobila</h3>
+            <span class="shrine-area main-label">Main Temple</span>
+          </div>
+        </div>
+        <div class="shrine-hover-overlay"><span>View History</span></div>
+      </div>
+
+      <!-- 3. Kroda -->
+      <div class="shrine-window" onclick="openTemple(2)">
+        <div class="shrine-arch-top"></div>
+        <div class="shrine-frame">
+          <div class="shrine-img-wrap">
+            <img src="images/kroda.jpg" alt="Kroda Narasimha" loading="lazy" />
+          </div>
+          <div class="shrine-lamp"></div>
+          <div class="shrine-info">
+            <span class="shrine-num">03</span>
+            <h3>Kroda</h3>
+            <span class="shrine-area">Upper Ahobilam</span>
+          </div>
+        </div>
+        <div class="shrine-hover-overlay"><span>View History</span></div>
+      </div>
+
+      <!-- 4. Malola -->
+      <div class="shrine-window" onclick="openTemple(3)">
+        <div class="shrine-arch-top"></div>
+        <div class="shrine-frame">
+          <div class="shrine-img-wrap">
+            <img src="images/malola.jpg" alt="Malola Narasimha" loading="lazy" />
+          </div>
+          <div class="shrine-lamp"></div>
+          <div class="shrine-info">
+            <span class="shrine-num">04</span>
+            <h3>Malola</h3>
+            <span class="shrine-area">Upper Ahobilam</span>
+          </div>
+        </div>
+        <div class="shrine-hover-overlay"><span>View History</span></div>
+      </div>
+
+      <!-- 5. Kaaranja -->
+      <div class="shrine-window" onclick="openTemple(4)">
+        <div class="shrine-arch-top"></div>
+        <div class="shrine-frame">
+          <div class="shrine-img-wrap">
+            <img src="images/kaaranja.jpg" alt="Kaaranja Narasimha" loading="lazy" />
+          </div>
+          <div class="shrine-lamp"></div>
+          <div class="shrine-info">
+            <span class="shrine-num">05</span>
+            <h3>Kaaranja</h3>
+            <span class="shrine-area">Upper Ahobilam</span>
+          </div>
+        </div>
+        <div class="shrine-hover-overlay"><span>View History</span></div>
+      </div>
+
+      <!-- 6. Bhargava -->
+      <div class="shrine-window" onclick="openTemple(5)">
+        <div class="shrine-arch-top"></div>
+        <div class="shrine-frame">
+          <div class="shrine-img-wrap">
+            <img src="images/bhargava.jpg" alt="Bhargava Narasimha" loading="lazy" />
+          </div>
+          <div class="shrine-lamp"></div>
+          <div class="shrine-info">
+            <span class="shrine-num">06</span>
+            <h3>Bhargava</h3>
+            <span class="shrine-area">Upper Ahobilam</span>
+          </div>
+        </div>
+        <div class="shrine-hover-overlay"><span>View History</span></div>
+      </div>
+
+      <!-- 7. Yogananda -->
+      <div class="shrine-window" onclick="openTemple(6)">
+        <div class="shrine-arch-top"></div>
+        <div class="shrine-frame">
+          <div class="shrine-img-wrap">
+            <img src="images/yogananda.jpg" alt="Yogananda Narasimha" loading="lazy" />
+          </div>
+          <div class="shrine-lamp"></div>
+          <div class="shrine-info">
+            <span class="shrine-num">07</span>
+            <h3>Yogananda</h3>
+            <span class="shrine-area">Upper Ahobilam</span>
+          </div>
+        </div>
+        <div class="shrine-hover-overlay"><span>View History</span></div>
+      </div>
+
+      <!-- 8. Kshatravata -->
+      <div class="shrine-window" onclick="openTemple(7)">
+        <div class="shrine-arch-top"></div>
+        <div class="shrine-frame">
+          <div class="shrine-img-wrap">
+            <img src="images/kshatravata.jpg" alt="Kshatravata Narasimha" loading="lazy" />
+          </div>
+          <div class="shrine-lamp"></div>
+          <div class="shrine-info">
+            <span class="shrine-num">08</span>
+            <h3>Kshatravata</h3>
+            <span class="shrine-area">Upper Ahobilam</span>
+          </div>
+        </div>
+        <div class="shrine-hover-overlay"><span>View History</span></div>
+      </div>
+
+      <!-- 9. Pavana -->
+      <div class="shrine-window" onclick="openTemple(8)">
+        <div class="shrine-arch-top"></div>
+        <div class="shrine-frame">
+          <div class="shrine-img-wrap">
+            <img src="images/pavana.jpg" alt="Pavana Narasimha" loading="lazy" />
+          </div>
+          <div class="shrine-lamp"></div>
+          <div class="shrine-info">
+            <span class="shrine-num">09</span>
+            <h3>Pavana</h3>
+            <span class="shrine-area">Upper Ahobilam</span>
+          </div>
+        </div>
+        <div class="shrine-hover-overlay"><span>View History</span></div>
+      </div>
+
+    </div><!-- end shrine-grid -->
+
+    <p class="shrine-note">✦ Click on any shrine window to learn about its history, significance, trek details & darshan timings ✦</p>
+  </div>
+</section>
+
+<!-- TEMPLE TIMINGS -->
+<section id="timings" class="section section-light">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Darshan Schedule</span>
+      <h2 class="section-title">Temple Timings</h2>
+      <div class="divider-ornament">⸻ ✦ ⸻</div>
+    </div>
+    <div class="timings-grid">
+      <div class="timings-card">
+        <h3>🌅 Morning</h3>
+        <ul>
+          <li><span>Suprabhatam & Tiruvaaradhana</span><strong>6:00 AM</strong></li>
+          <li><span>Morning Darshan Opens</span><strong>6:30 AM</strong></li>
+          <li><span>Abhishekam</span><strong>7:00 AM</strong></li>
+          <li><span>Kalasha Pooja</span><strong>8:00 AM</strong></li>
+          <li><span>Astothara Archana</span><strong>9:00 AM</strong></li>
+        </ul>
+      </div>
+      <div class="timings-card">
+        <h3>☀ Afternoon</h3>
+        <ul>
+          <li><span>Noon Rajabhoga Archana</span><strong>12:00 PM</strong></li>
+          <li><span>Annadanam (Noon Meals)</span><strong>12:30 PM</strong></li>
+          <li><span>Afternoon Darshan</span><strong>1:00 PM</strong></li>
+          <li><span>Special Sevas</span><strong>2:00 PM</strong></li>
+          <li><span>Evening Darshan Opens</span><strong>4:00 PM</strong></li>
+        </ul>
+      </div>
+      <div class="timings-card">
+        <h3>🌆 Evening</h3>
+        <ul>
+          <li><span>Evening Abhishekam</span><strong>5:00 PM</strong></li>
+          <li><span>Sayarakshai Archana</span><strong>6:00 PM</strong></li>
+          <li><span>Deepa Aradhana</span><strong>6:30 PM</strong></li>
+          <li><span>Ekantha Seva</span><strong>7:30 PM</strong></li>
+          <li><span>Temple Closes</span><strong>8:00 PM</strong></li>
+        </ul>
+      </div>
+      <div class="timings-card special">
+        <h3>🌟 Special Days</h3>
+        <p>On <strong>Swathi Nakshatra</strong> — monthly Thirumanjanam (ritual bathing) for all nine shrines.</p>
+        <p>During <strong>Brahmothsavam</strong> (Feb–Mar, Masi month) — 10-day festival with extended timings and special processions.</p>
+        <p>Sponsorship: ₹5,000 for Thirumanjanam of all nine temples via Swati Trust.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SEVAS & DONATIONS -->
+<section id="sevas" class="section section-saffron">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Divine Services</span>
+      <h2 class="section-title">Sevas & Donations</h2>
+      <div class="divider-ornament">⸻ ✦ ⸻</div>
+      <p class="section-desc">Participate in the sacred services and contribute to the Devasthanam</p>
+    </div>
+    <div class="sevas-tabs">
+      <button class="stab active" onclick="showSevaTab('sevas-list')">Sevas</button>
+      <button class="stab" onclick="showSevaTab('donations-list')">Donations</button>
+      <button class="stab" onclick="showSevaTab('annadanam-seva')">Annadanam</button>
+      <button class="stab" onclick="showSevaTab('gosala-seva')">Gosala</button>
+    </div>
+
+    <div id="sevas-list" class="seva-tab-content active">
+      <div class="seva-grid">
+        <div class="seva-card"><div class="seva-icon">🛁</div><h4>Abhishekam</h4><p>Ritual bathing of the deity with sacred waters, milk, honey, and panchamrit</p><span class="seva-price">₹ 500 onwards</span><a href="#contact" class="btn-seva">Book Seva</a></div>
+        <div class="seva-card"><div class="seva-icon">📿</div><h4>Archana</h4><p>108/1008 name recitation with flowers offered to the Lord</p><span class="seva-price">₹ 100 onwards</span><a href="#contact" class="btn-seva">Book Seva</a></div>
+        <div class="seva-card"><div class="seva-icon">🪔</div><h4>Deepa Seva</h4><p>Lamp offering dedicated to the Lord during the evening Aradhana</p><span class="seva-price">₹ 250 onwards</span><a href="#contact" class="btn-seva">Book Seva</a></div>
+        <div class="seva-card"><div class="seva-icon">🌸</div><h4>Pushpa Seva</h4><p>Flower decoration and garland offering for the deity</p><span class="seva-price">₹ 300 onwards</span><a href="#contact" class="btn-seva">Book Seva</a></div>
+        <div class="seva-card"><div class="seva-icon">🎁</div><h4>Vastra Samarpan</h4><p>Offering of new clothes/silk to the Lord and Goddess</p><span class="seva-price">₹ 1,000 onwards</span><a href="#contact" class="btn-seva">Book Seva</a></div>
+        <div class="seva-card"><div class="seva-icon">⭐</div><h4>Thirumanjanam</h4><p>Monthly ritual bath on Swathi Nakshatra for all nine shrines</p><span class="seva-price">₹ 5,000 (all 9)</span><a href="#contact" class="btn-seva">Book Seva</a></div>
+        <div class="seva-card"><div class="seva-icon">🙏</div><h4>Personalized Sankalpam</h4><p>Personal prayer offering recited by priests with your name, gothram & nakshatram</p><span class="seva-price">₹ 200 onwards</span><a href="#contact" class="btn-seva">Book Seva</a></div>
+        <div class="seva-card"><div class="seva-icon">🎺</div><h4>Suprabhatam Seva</h4><p>Early morning wake-up service — the Lord is greeted in your name</p><span class="seva-price">₹ 500</span><a href="#contact" class="btn-seva">Book Seva</a></div>
+      </div>
+    </div>
+
+    <div id="donations-list" class="seva-tab-content">
+      <div class="seva-grid">
+        <div class="seva-card"><div class="seva-icon">🏛</div><h4>Temple Renovation</h4><p>Contribute to the restoration and upkeep of the ancient temple structures</p><span class="seva-price">Any amount</span><a href="#contact" class="btn-seva">Donate</a></div>
+        <div class="seva-card"><div class="seva-icon">📚</div><h4>Veda Patashala</h4><p>Sponsor the education of young Vedic scholars preserving ancient traditions</p><span class="seva-price">₹ 1,000/month</span><a href="#contact" class="btn-seva">Donate</a></div>
+        <div class="seva-card"><div class="seva-icon">💡</div><h4>Digital Hundi</h4><p>Online donation directly to the Devasthanam hundi (donation box)</p><span class="seva-price">Any amount</span><a href="#contact" class="btn-seva">Donate</a></div>
+        <div class="seva-card"><div class="seva-icon">🌍</div><h4>NRI Donations</h4><p>International devotees can contribute in multiple currencies with tax receipts</p><span class="seva-price">Multi-currency</span><a href="#contact" class="btn-seva">Donate</a></div>
+        <div class="seva-card"><div class="seva-icon">🔬</div><h4>Heritage Preservation</h4><p>Fund the digitization and documentation of temple heritage records</p><span class="seva-price">Any amount</span><a href="#contact" class="btn-seva">Donate</a></div>
+        <div class="seva-card"><div class="seva-icon">🎪</div><h4>Festival Sponsorship</h4><p>Sponsor a festival day or special event at the Devasthanam</p><span class="seva-price">₹ 10,000+</span><a href="#contact" class="btn-seva">Donate</a></div>
+      </div>
+      <p class="tax-note">* All donations are eligible for 80G tax exemption. Official receipts provided.</p>
+    </div>
+
+    <div id="annadanam-seva" class="seva-tab-content">
+      <div class="annadanam-info">
+        <div class="anna-text">
+          <h3>Annadanam – The Sacred Feeding</h3>
+          <p>Annadanam (feeding devotees) is considered one of the highest forms of devotion. The Annamacharya Trust provides free meals to all pilgrims daily:</p>
+          <ul class="anna-list">
+            <li>🌅 <strong>Morning & Evening:</strong> Curd rice (free to all pilgrims)</li>
+            <li>🍛 <strong>Noon Meals:</strong> Full vegetarian meals (free, 12:30 PM onwards)</li>
+          </ul>
+          <h4>Sponsor Annadanam</h4>
+          <div class="seva-grid anna-sponsor-grid">
+            <div class="seva-card"><div class="seva-icon">☀</div><h4>One Day Sponsorship</h4><p>Feed all pilgrims for an entire day in your name or family's name</p><span class="seva-price">₹ 15,000</span><a href="#contact" class="btn-seva">Sponsor</a></div>
+            <div class="seva-card"><div class="seva-icon">🎊</div><h4>Festival Meal Sponsorship</h4><p>Sponsor meals during major festivals when thousands of pilgrims visit</p><span class="seva-price">₹ 25,000+</span><a href="#contact" class="btn-seva">Sponsor</a></div>
+            <div class="seva-card"><div class="seva-icon">🔁</div><h4>Monthly Sponsorship</h4><p>Recurring monthly sponsorship for Annadanam — a lasting legacy</p><span class="seva-price">₹ 10,000/month</span><a href="#contact" class="btn-seva">Sponsor</a></div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="gosala-seva" class="seva-tab-content">
+      <div class="gosala-info">
+        <h3>Gosala & Dharmic Services</h3>
+        <p>Support the temple Gosala (cow shelter) and other charitable dharmic initiatives:</p>
+        <div class="seva-grid">
+          <div class="seva-card"><div class="seva-icon">🐄</div><h4>Cow Adoption</h4><p>Adopt a temple cow and sponsor its care, feed, and medical expenses</p><span class="seva-price">₹ 3,000/month</span><a href="#contact" class="btn-seva">Adopt</a></div>
+          <div class="seva-card"><div class="seva-icon">🌾</div><h4>Monthly Cow Sponsorship</h4><p>Contribute towards feeding and caring for the sacred cows of the Gosala</p><span class="seva-price">₹ 500/month</span><a href="#contact" class="btn-seva">Sponsor</a></div>
+          <div class="seva-card"><div class="seva-icon">🙏</div><h4>Gau Seva</h4><p>Direct hands-on service to the cows at the temple Gosala</p><span class="seva-price">Contact us</span><a href="#contact" class="btn-seva">Register</a></div>
+          <div class="seva-card"><div class="seva-icon">🪔</div><h4>Deepam Sponsorship</h4><p>Light a lamp in the temple every day for a month in your name</p><span class="seva-price">₹ 1,500/month</span><a href="#contact" class="btn-seva">Sponsor</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- LIVE DARSHAN -->
+<section id="live-darshan" class="section section-dark">
+  <div class="container">
+    <div class="section-header light">
+      <span class="section-tag live-badge">● LIVE</span>
+      <h2 class="section-title">Virtual Darshan & Live Streaming</h2>
+      <div class="divider-ornament">⸻ ✦ ⸻</div>
+      <p class="section-desc">Experience the divine presence of Lord Narasimha from anywhere in the world</p>
+    </div>
+    <div class="live-grid">
+      <div class="live-main-card">
+        <div class="live-player-placeholder">
+          <div class="live-play-btn" onclick="alert('Live stream will be available shortly. Follow our YouTube channel for updates.')">
+            <span class="play-icon">▶</span>
+            <p>Daily Aarti – Live Stream</p>
+            <p class="live-note">Streaming daily at 6:00 AM & 6:30 PM IST</p>
+          </div>
+        </div>
+        <div class="live-card-footer">
+          <span class="🔴">🔴 Live at scheduled times</span>
+          <a href="https://www.youtube.com" target="_blank" class="btn btn-primary btn-sm">Watch on YouTube</a>
+        </div>
+      </div>
+      <div class="live-schedule">
+        <h3>Live Streaming Schedule</h3>
+        <ul class="live-schedule-list">
+          <li><span>Suprabhatam</span><strong>6:00 AM</strong></li>
+          <li><span>Morning Abhishekam</span><strong>7:00 AM</strong></li>
+          <li><span>Noon Rajabhoga Archana</span><strong>12:00 PM</strong></li>
+          <li><span>Evening Deepa Aradhana</span><strong>6:30 PM</strong></li>
+          <li><span>Ekantha Seva</span><strong>7:30 PM</strong></li>
+        </ul>
+        <div class="live-platforms">
+          <p>Available on:</p>
+          <div class="platform-badges">
+            <span class="platform-badge yt">YouTube</span>
+            <span class="platform-badge fb">Facebook</span>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="prasadam-section">
+      <h3>Prasadam Booking</h3>
+      <p>Book Prasadam from the temple and receive it at your doorstep through our courier service.</p>
+      <a href="#contact" class="btn btn-outline-light">Book Prasadam</a>
+    </div>
+  </div>
+</section>
+
+<!-- PLAN YOUR VISIT -->
+<section id="visit" class="section section-light">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Pilgrimage Guide</span>
+      <h2 class="section-title">Plan Your Visit</h2>
+      <div class="divider-ornament">⸻ ✦ ⸻</div>
+    </div>
+    <div class="visit-tabs">
+      <button class="vtab active" onclick="showVisitTab('how-to-reach')">How to Reach</button>
+      <button class="vtab" onclick="showVisitTab('best-time')">Best Time to Visit</button>
+      <button class="vtab" onclick="showVisitTab('distances')">Distances</button>
+      <button class="vtab" onclick="showVisitTab('transport-local')">Local Transport</button>
+    </div>
+
+    <div id="how-to-reach" class="visit-tab active">
+      <div class="reach-grid">
+        <div class="reach-card">
+          <div class="reach-icon">🚆</div>
+          <h4>From Chennai</h4>
+          <p><strong>By Train:</strong> Bombay Mail departs 9:55 PM, arrives Kadappa at 3:15 AM. From Kadappa, hire a taxi (~₹1,000 round trip, 100 km) or take a bus to Allagadda, then local bus to Ahobilam.</p>
+          <p><strong>By Road:</strong> 9–10 hours via Renigunta → Kadappa → Allagadda → Ahobilam.</p>
+        </div>
+        <div class="reach-card">
+          <div class="reach-icon">🚌</div>
+          <h4>From Hyderabad</h4>
+          <p><strong>By Train:</strong> Thungabadra Express departs 7:00 PM, reaches Kurnool at 10:30 PM. From Kurnool, buses available to Allagadda, then local buses every 45 minutes to Ahobilam.</p>
+          <p><strong>Last Bus:</strong> Returns from Ahobilam at 9:45 PM.</p>
+        </div>
+        <div class="reach-card">
+          <div class="reach-icon">✈</div>
+          <h4>From Bangalore</h4>
+          <p><strong>By Train:</strong> Prasant Express departs 2:00 PM, reaches Nandyal at 11:50 PM. From Nandyal, local transport to Ahobilam (65 km).</p>
+          <p><strong>By Road:</strong> ~7.5 hours via Madanapalli → Cuddapah → Allagadda → Ahobilam.</p>
+        </div>
+        <div class="reach-card">
+          <div class="reach-icon">🛣</div>
+          <h4>Nearest Towns</h4>
+          <p><strong>Allagadda:</strong> 24 km – nearest town with regular bus connectivity to Ahobilam.</p>
+          <p><strong>Nandyal:</strong> 65 km – nearest railway station with good connectivity.</p>
+          <p><strong>Kurnool:</strong> ~90 km – nearest major city.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="best-time" class="visit-tab">
+      <div class="season-grid">
+        <div class="season-card best">
+          <div class="season-icon">🍂</div>
+          <h4>October – March</h4>
+          <p class="season-label">Best Season</p>
+          <p>Cool and pleasant weather makes trekking comfortable. Ideal for visiting all nine temples including the more arduous treks to Jwala and Pavana.</p>
+        </div>
+        <div class="season-card good">
+          <div class="season-icon">🌸</div>
+          <h4>February – March</h4>
+          <p class="season-label">Festival Season</p>
+          <p>Brahmothsavam (10-day festival) during Masi month. Thousands of devotees attend. Book accommodation well in advance.</p>
+        </div>
+        <div class="season-card moderate">
+          <div class="season-icon">🌧</div>
+          <h4>June – September</h4>
+          <p class="season-label">Monsoon Season</p>
+          <p>Lush greenery but some trek routes may be difficult. Forest permits may be restricted. Check conditions before planning.</p>
+        </div>
+        <div class="season-card">
+          <div class="season-icon">☀</div>
+          <h4>April – May</h4>
+          <p class="season-label">Summer – Avoid</p>
+          <p>Hot weather makes trekking strenuous. If visiting, plan for early morning darshan only and carry sufficient water.</p>
+        </div>
+      </div>
+      <div class="visit-duration">
+        <h4>Recommended Duration</h4>
+        <div class="duration-cards">
+          <div class="duration-card"><strong>1 Day</strong><p>Quick visit: Lower Ahobilam + accessible Upper Ahobilam temples (Karanja, Yogananda, Chatravata)</p></div>
+          <div class="duration-card highlight"><strong>1.5 – 2 Days</strong><p>Moderate pace: All accessible temples + one major trek (Jwala or Pavana). Recommended duration.</p></div>
+          <div class="duration-card"><strong>3 Days</strong><p>Complete pilgrimage: All nine temples including Jwala, Pavana, Ugra Stambham at a comfortable pace.</p></div>
+        </div>
+      </div>
+    </div>
+
+    <div id="distances" class="visit-tab">
+      <div class="distance-table-wrap">
+        <table class="distance-table">
+          <thead><tr><th>City</th><th>Distance</th><th>Travel Time</th><th>Best Mode</th></tr></thead>
+          <tbody>
+            <tr><td>Chennai</td><td>400 km</td><td>9–10 hrs</td><td>Train + Bus / Car</td></tr>
+            <tr><td>Hyderabad</td><td>380 km</td><td>7–8 hrs</td><td>Train + Bus / Car</td></tr>
+            <tr><td>Bangalore</td><td>350 km</td><td>7–8 hrs</td><td>Train + Car</td></tr>
+            <tr><td>Cuddapah (Kadapa)</td><td>112 km</td><td>3 hrs</td><td>Car / Bus</td></tr>
+            <tr><td>Nandyal</td><td>65 km</td><td>1.5 hrs</td><td>Car / Bus</td></tr>
+            <tr><td>Allagadda</td><td>24 km</td><td>45 min</td><td>Car / Bus</td></tr>
+            <tr><td>Kurnool</td><td>~90 km</td><td>2 hrs</td><td>Car / Bus</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <div id="transport-local" class="visit-tab">
+      <div class="transport-grid">
+        <div class="transport-card">
+          <div class="t-icon">🚐</div>
+          <h4>Local Buses</h4>
+          <p>Buses run every 45 minutes between Allagadda and Ahobilam. Last bus from Ahobilam departs at 9:45 PM.</p>
+        </div>
+        <div class="transport-card">
+          <div class="t-icon">🚕</div>
+          <h4>Jeep / Auto</h4>
+          <p>Shared jeeps and autorickshaws available for trips to Bhargava (2 km) and other accessible temples. Negotiate fare before boarding.</p>
+        </div>
+        <div class="transport-card">
+          <div class="t-icon">🚖</div>
+          <h4>Taxi from Kadapa</h4>
+          <p>Hire a taxi from Kadapa railway station for ~₹1,000 round trip (100 km). Convenient for families with luggage.</p>
+        </div>
+        <div class="transport-card">
+          <div class="t-icon">🗺</div>
+          <h4>Temple Shuttle</h4>
+          <p>Shuttle service available between Lower and Upper Ahobilam during peak festival periods. Check at guest house for current schedule.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- VISITOR GUIDELINES -->
+    <div class="visitor-guidelines">
+      <h3>Important Visitor Guidelines</h3>
+      <div class="guidelines-grid">
+        <div class="guideline"><span class="g-icon">👕</span><p>Wear traditional attire — dhoti/saree preferred. Avoid western clothes at temples.</p></div>
+        <div class="guideline"><span class="g-icon">📸</span><p>Photography inside the sanctum sanctorum is not permitted. Respect the sacred space.</p></div>
+        <div class="guideline"><span class="g-icon">🥾</span><p>Wear comfortable trekking footwear for upper temple visits. Remove shoes at temple entrance.</p></div>
+        <div class="guideline"><span class="g-icon">💧</span><p>Carry sufficient water. Drinking water points are available at key locations.</p></div>
+        <div class="guideline"><span class="g-icon">📱</span><p>Keep phones on silent mode inside temples. Stay on marked trek paths.</p></div>
+        <div class="guideline"><span class="g-icon">🌿</span><p>Do not pluck flowers or disturb wildlife. Ahobilam is within a forest reserve.</p></div>
+        <div class="guideline"><span class="g-icon">👴</span><p>Senior citizens and those with mobility limitations should plan for accessible temples (Karanja, Lower Ahobilam).</p></div>
+        <div class="guideline"><span class="g-icon">🎫</span><p>Forest permission may be required for certain trek routes. Verify at the entry point.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- TREKKING -->
+<section id="trekking" class="section section-forest">
+  <div class="container">
+    <div class="section-header light">
+      <span class="section-tag">Pilgrimage Treks</span>
+      <h2 class="section-title">Trekking & Safety</h2>
+      <div class="divider-ornament">⸻ ✦ ⸻</div>
+      <p class="section-desc">All nine temples are spread across approximately a 5 km radius in the Eastern Ghats</p>
+    </div>
+    <div class="trek-grid">
+      <div class="trek-card">
+        <div class="trek-header easy">
+          <span class="trek-diff">Easy</span>
+          <h4>Accessible Temples Route</h4>
+        </div>
+        <div class="trek-body">
+          <p><strong>Temples:</strong> Karanja (roadside), Yogananda & Chatravata (2 km paved road), Lower Ahobilam (Prahlada Varadan)</p>
+          <div class="trek-detail"><span>⏱ Duration:</span> 2–3 hours total</div>
+          <div class="trek-detail"><span>📏 Distance:</span> 4–6 km</div>
+          <div class="trek-detail"><span>👥 Suitable for:</span> All ages, families, seniors</div>
+          <div class="trek-detail"><span>🧭 Guide needed:</span> Not required</div>
+        </div>
+      </div>
+      <div class="trek-card">
+        <div class="trek-header moderate">
+          <span class="trek-diff">Moderate</span>
+          <h4>Jwala Narasimha Trek</h4>
+        </div>
+        <div class="trek-body">
+          <p><strong>Covers:</strong> Kroda → Malola → Jwala Narasimha (→ optional: Ugra Stambham)</p>
+          <div class="trek-detail"><span>⏱ Duration:</span> 3 hrs round trip (+ 1 hr for Ugra Stambham)</div>
+          <div class="trek-detail"><span>📏 Route:</span> River bed path, narrow mountain trail</div>
+          <div class="trek-detail"><span>💪 Fitness:</span> Moderate fitness required</div>
+          <div class="trek-detail"><span>🧭 Guide:</span> <strong>Strongly recommended</strong> (~₹200)</div>
+          <p class="trek-note">⚠ Start early morning. Carry 2+ litres of water. Wear sturdy footwear.</p>
+        </div>
+      </div>
+      <div class="trek-card">
+        <div class="trek-header hard">
+          <span class="trek-diff">Challenging</span>
+          <h4>Pavana Narasimha Trek</h4>
+        </div>
+        <div class="trek-body">
+          <p><strong>Route:</strong> 250 steep steps climb followed by 4 km relatively flat terrain</p>
+          <div class="trek-detail"><span>⏱ Duration:</span> 3 hrs round trip</div>
+          <div class="trek-detail"><span>📏 Steps:</span> 250 steep + 4 km flat</div>
+          <div class="trek-detail"><span>💪 Fitness:</span> Good fitness required</div>
+          <div class="trek-detail"><span>🚐 Alternative:</span> Rough jeep route (~2 hrs)</div>
+          <p class="trek-note">⚠ Not recommended for those with knee or heart conditions.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="safety-panel">
+      <h3>🚨 Safety Information</h3>
+      <div class="safety-grid">
+        <div class="safety-item"><span>🆘</span><p><strong>Emergency Contact:</strong> Guest House Manager – 08519-252045</p></div>
+        <div class="safety-item"><span>🌡</span><p><strong>Weather Alerts:</strong> Check forest department notices before trek</p></div>
+        <div class="safety-item"><span>🌲</span><p><strong>Forest Permits:</strong> May be required for certain routes — verify at entry</p></div>
+        <div class="safety-item"><span>🐍</span><p><strong>Wildlife:</strong> Nallamala forest has wildlife — stay on marked paths</p></div>
+        <div class="safety-item"><span>📞</span><p><strong>Guide Booking:</strong> Contact guest house manager for verified guide (~₹200)</p></div>
+        <div class="safety-item"><span>🏥</span><p><strong>Medical:</strong> Basic first aid at guest house. Nearest hospital in Allagadda (24 km)</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- GUIDE SERVICES -->
+<section id="guides" class="section section-light">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Expert Assistance</span>
+      <h2 class="section-title">Guide Services</h2>
+      <div class="divider-ornament">⸻ ✦ ⸻</div>
+    </div>
+    <div class="guide-grid">
+      <div class="guide-card">
+        <div class="guide-avatar">🧔</div>
+        <h4>Temple Spiritual Guide</h4>
+        <p>Expert guides who explain the spiritual significance, history, and rituals of each temple. Available in Telugu, Tamil, Hindi & English.</p>
+        <div class="guide-details">
+          <span>⭐ 4.8/5 rated</span>
+          <span>🗣 Multi-language</span>
+        </div>
+        <a href="#contact" class="btn btn-primary btn-sm">Book Guide</a>
+      </div>
+      <div class="guide-card">
+        <div class="guide-avatar">🥾</div>
+        <h4>Trek Guide</h4>
+        <p>Experienced local guides for Jwala, Pavana, and Ugra Stambham treks. They know the terrain, safe paths, and optimal timing. Strongly recommended for Jwala.</p>
+        <div class="guide-details">
+          <span>💰 ~₹200 per trip</span>
+          <span>📍 Routes: All treks</span>
+        </div>
+        <a href="#contact" class="btn btn-primary btn-sm">Book Guide</a>
+      </div>
+      <div class="guide-card">
+        <div class="guide-avatar">📸</div>
+        <h4>Photography Guide</h4>
+        <p>Capture the natural beauty and sacred architecture of Ahobilam with a guide who knows the best vantage points and permitted photography spots.</p>
+        <div class="guide-details">
+          <span>🌅 Sunrise & sunset spots</span>
+          <span>🏔 Eastern Ghats views</span>
+        </div>
+        <a href="#contact" class="btn btn-primary btn-sm">Book Guide</a>
+      </div>
+      <div class="guide-card">
+        <div class="guide-avatar">👑</div>
+        <h4>VIP Darshan Assistance</h4>
+        <p>Dedicated assistance for VIP darshan coordination, special pooja arrangements, and smooth darshan experience at all nine temples.</p>
+        <div class="guide-details">
+          <span>✅ Pre-arranged access</span>
+          <span>🙏 Pooja coordination</span>
+        </div>
+        <a href="#contact" class="btn btn-primary btn-sm">Book Guide</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- SPIRITUAL HERITAGE LIBRARY -->
+<section id="heritage" class="section section-maroon">
+  <div class="container">
+    <div class="section-header light">
+      <span class="section-tag">Spiritual Knowledge</span>
+      <h2 class="section-title">Heritage & Spiritual Library</h2>
+      <div class="divider-ornament">⸻ ✦ ⸻</div>
+      <p class="section-desc">Preserving and sharing the timeless spiritual wealth of Ahobilam</p>
+    </div>
+    <div class="heritage-grid">
+      <div class="heritage-card">
+        <div class="h-icon">📜</div>
+        <h4>Narasimha Stotram Library</h4>
+        <p>Complete collection of Narasimha stotras, kavachams, and hymns with audio, text, and meaning in Telugu, Sanskrit, and English.</p>
+        <a href="#" class="h-link">Explore →</a>
+      </div>
+      <div class="heritage-card">
+        <div class="h-icon">🎵</div>
+        <h4>Vishnu Sahasranamam</h4>
+        <p>Audio and text of the thousand names of Lord Vishnu. Listen to traditional recitations by temple priests.</p>
+        <a href="#" class="h-link">Listen →</a>
+      </div>
+      <div class="heritage-card">
+        <div class="h-icon">🛡</div>
+        <h4>Narasimha Kavacham</h4>
+        <p>The protective armour hymn of Lord Narasimha — text, audio, and transliteration for daily recitation.</p>
+        <a href="#" class="h-link">Read →</a>
+      </div>
+      <div class="heritage-card">
+        <div class="h-icon">🎙</div>
+        <h4>Pravachanam Archive</h4>
+        <p>Spiritual discourses and pravachanams by eminent scholars on Narasimha tattvam, Bhagavat Gita, and Vaishnava sampradayam.</p>
+        <a href="#" class="h-link">Watch →</a>
+      </div>
+      <div class="heritage-card">
+        <div class="h-icon">🏛</div>
+        <h4>Temple History</h4>
+        <p>Detailed history from the 9th-century literary references through the Vijayanagara period to the present day. Inscriptions, art, and architecture documented.</p>
+        <a href="#" class="h-link">Read →</a>
+      </div>
+      <div class="heritage-card">
+        <div class="h-icon">🧘</div>
+        <h4>Vaishnava Sampradayam</h4>
+        <p>Learn about the Vishishtadvaita philosophy, the Alvars, Sri Vaishnava traditions, and the significance of the 108 Divya Desams.</p>
+        <a href="#" class="h-link">Learn →</a>
+      </div>
+    </div>
+
+    <!-- Festival Calendar -->
+    <div class="festival-calendar">
+      <h3>Festival Calendar 2025–26</h3>
+      <div class="festival-list">
+        <div class="festival-item upcoming">
+          <div class="f-date"><span class="f-month">FEB</span><span class="f-day">2026</span></div>
+          <div class="f-info">
+            <h5>Brahmothsavam</h5>
+            <p>10-day grand festival. Lord Prahlada Varadan processions. Thousands attend. Book accommodation early.</p>
+          </div>
+          <span class="f-badge">Grand Festival</span>
+        </div>
+        <div class="festival-item">
+          <div class="f-date"><span class="f-month">Monthly</span><span class="f-day">Swathi</span></div>
+          <div class="f-info">
+            <h5>Swathi Nakshatra – Thirumanjanam</h5>
+            <p>Monthly ritual bathing for all nine shrine deities. Special darshan and sevas.</p>
+          </div>
+          <span class="f-badge">Monthly</span>
+        </div>
+        <div class="festival-item">
+          <div class="f-date"><span class="f-month">JAN</span><span class="f-day">Vaikunta</span></div>
+          <div class="f-info">
+            <h5>Vaikunta Ekadashi</h5>
+            <p>Most sacred Ekadashi — Vaikunta Dwara Darshan. Extended temple hours and special sevas.</p>
+          </div>
+          <span class="f-badge">Major Festival</span>
+        </div>
+        <div class="festival-item">
+          <div class="f-date"><span class="f-month">APR</span><span class="f-day">Ugadi</span></div>
+          <div class="f-info">
+            <h5>Ugadi – Telugu New Year</h5>
+            <p>New year celebrations with special poojas and Panchanga Sravanam (new year almanac reading).</p>
+          </div>
+          <span class="f-badge">Festival</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- VOLUNTEER SECTION -->
+<section id="volunteer" class="section section-light">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag">Seva Opportunities</span>
+      <h2 class="section-title">Volunteer & Community</h2>
+      <div class="divider-ornament">⸻ ✦ ⸻</div>
+    </div>
+    <div class="volunteer-grid">
+      <div class="vol-card">
+        <div class="vol-icon">🎪</div>
+        <h4>Festival Volunteer</h4>
+        <p>Assist with crowd management, darshan coordination, and devotee services during Brahmothsavam and other major festivals.</p>
+        <a href="#contact" class="btn btn-primary btn-sm">Register</a>
+      </div>
+      <div class="vol-card">
+        <div class="vol-icon">🍛</div>
+        <h4>Annadanam Volunteer</h4>
+        <p>Serve pilgrims with food distribution during Annadanam sessions. Earn spiritual merit through the highest form of service.</p>
+        <a href="#contact" class="btn btn-primary btn-sm">Register</a>
+      </div>
+      <div class="vol-card">
+        <div class="vol-icon">🥾</div>
+        <h4>Trek Safety Volunteer</h4>
+        <p>Help pilgrims navigate the treks safely. Guide, assist, and ensure the well-being of devotees on the mountain paths.</p>
+        <a href="#contact" class="btn btn-primary btn-sm">Register</a>
+      </div>
+      <div class="vol-card">
+        <div class="vol-icon">💻</div>
+        <h4>Digital Seva</h4>
+        <p>Contribute your skills in photography, videography, IT, or content creation to help preserve and share Ahobilam's heritage digitally.</p>
+        <a href="#contact" class="btn btn-primary btn-sm">Register</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACT & FOOTER -->
+<section id="contact" class="section section-dark">
+  <div class="container">
+    <div class="section-header light">
+      <span class="section-tag">Get in Touch</span>
+      <h2 class="section-title">Contact & Information</h2>
+      <div class="divider-ornament">⸻ ✦ ⸻</div>
+    </div>
+    <div class="contact-grid">
+      <div class="contact-info">
+        <h3>Ahobilam Devasthanam</h3>
+        <div class="contact-item"><span>📍</span><div><strong>Address</strong><p>Ahobilam, Kurnool District, Andhra Pradesh – 518 543</p></div></div>
+        <div class="contact-item"><span>📞</span><div><strong>Guest House (Malola)</strong><p>08519-252045 / 08519-252024<br>Mobile: 94905 15284</p></div></div>
+        <div class="contact-item"><span>📧</span><div><strong>Email</strong><p>info@ahobilamdevasthanam.org</p></div></div>
+        <div class="contact-item"><span>🕐</span><div><strong>Temple Hours</strong><p>6:00 AM – 8:00 PM (Daily)</p></div></div>
+        <div class="contact-social">
+          <h4>Follow Us</h4>
+          <div class="social-links">
+            <a href="#" class="social-btn youtube">YouTube</a>
+            <a href="#" class="social-btn facebook">Facebook</a>
+            <a href="#" class="social-btn instagram">Instagram</a>
+            <a href="#" class="social-btn telegram">Telegram</a>
+          </div>
+        </div>
+      </div>
+      <div class="contact-form-wrap">
+        <h3>Send a Message / Enquiry</h3>
+        <form class="contact-form" onsubmit="submitForm(event)">
+          <div class="form-row">
+            <input type="text" placeholder="Your Name" required />
+            <input type="text" placeholder="Gothram (optional)" />
+          </div>
+          <div class="form-row">
+            <input type="email" placeholder="Email Address" required />
+            <input type="tel" placeholder="Phone Number" />
+          </div>
+          <select>
+            <option value="">Select Enquiry Type</option>
+            <option>Seva Booking</option>
+            <option>Donation</option>
+            <option>Guide Booking</option>
+            <option>Transport</option>
+            <option>Prasadam</option>
+            <option>Volunteer</option>
+            <option>General Enquiry</option>
+          </select>
+          <textarea rows="4" placeholder="Your message or query…"></textarea>
+          <button type="submit" class="btn btn-primary full-width">Send Message 🙏</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- MAP SECTION -->
+<div class="map-section">
+  <div class="map-placeholder">
+    <div class="map-content">
+      <h3>📍 Location: Ahobilam, Kurnool District, Andhra Pradesh</h3>
+      <p>Coordinates: 15.13°N, 78.90°E · Altitude: ~800m above sea level</p>
+      <p>Situated within the Nallamala Forest Reserve, Eastern Ghats</p>
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer class="main-footer">
+  <div class="footer-inner">
+    <div class="footer-col">
+      <div class="footer-logo">🕉 Ahobilam Devasthanam</div>
+      <p>Sacred abode of Sri Nava Narasimha Swamy — one of the 108 Divya Desams. Nestled in the Eastern Ghats, Kurnool, Andhra Pradesh.</p>
+    </div>
+    <div class="footer-col">
+      <h5>Quick Links</h5>
+      <ul>
+        <li><a href="#about">About</a></li>
+        <li><a href="#temples">Nava Narasimha Temples</a></li>
+        <li><a href="#timings">Temple Timings</a></li>
+        <li><a href="#sevas">Sevas & Donations</a></li>
+        <li><a href="#live-darshan">Live Darshan</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Pilgrim Services</h5>
+      <ul>
+        <li><a href="#visit">Plan Your Visit</a></li>
+        <li><a href="#trekking">Trekking Guide</a></li>
+        <li><a href="#guides">Guide Services</a></li>
+        <li><a href="#annadanam">Annadanam</a></li>
+        <li><a href="#volunteer">Volunteer</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h5>Temple Info</h5>
+      <ul>
+        <li><a href="#heritage">Spiritual Library</a></li>
+        <li><a href="#heritage">Festival Calendar</a></li>
+        <li><a href="#sevas">Gosala Donations</a></li>
+        <li><a href="#contact">Contact Us</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">
+    <p>🕉 Jai Sri Narasimha · Ahobilam Devasthanam © 2025 · All Rights Reserved</p>
+    <p class="footer-credit">Digital Platform by SreeViaAi Technologies Pvt Ltd · Contact: 70957 28997</p>
+  </div>
+</footer>
+
+<!-- BACK TO TOP -->
+<button class="back-to-top" id="backToTop" onclick="window.scrollTo({top:0,behavior:'smooth'})">▲</button>
+
+<!-- TEMPLE MODAL -->
+<div id="temple-modal" class="modal-overlay" onclick="closeModal(event)">
+  <div class="modal-content" id="modal-body"></div>
+</div>
+
+<script src="app.js"></script>
+</body>
+</html>
