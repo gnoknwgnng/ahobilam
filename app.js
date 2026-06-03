@@ -383,3 +383,30 @@ window.addEventListener('load', () => {
     }, 1500); // 1.5 second delay for smooth, premium devotional experience
   }
 });
+
+// ---- GALLERY LIGHTBOX ----
+function openLightbox(src, element) {
+  const lightbox = document.getElementById('gallery-lightbox');
+  const img = document.getElementById('lightbox-img');
+  const cap = document.getElementById('lightbox-caption');
+  if (lightbox && img && cap) {
+    img.src = src;
+    const titleEl = element.querySelector('h4');
+    cap.textContent = titleEl ? titleEl.textContent : '';
+    lightbox.classList.add('open');
+    document.body.style.overflow = 'hidden'; // Disable scroll under overlay
+  }
+}
+
+function closeLightbox(event) {
+  const lightbox = document.getElementById('gallery-lightbox');
+  if (lightbox) {
+    // Only close if clicked on background or close button
+    if (event && event.target !== lightbox && !event.target.classList.contains('lightbox-close-btn')) {
+      return;
+    }
+    lightbox.classList.remove('open');
+    document.body.style.overflow = ''; // Restore scroll
+  }
+}
+
