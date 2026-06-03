@@ -38,8 +38,8 @@
         </svg>
       </div>
     </div>
-    <h2 class="preloader-title" data-en="Ahobilam Devasthanam" data-te="అహోబిలం దేవస్థానం">Ahobilam Devasthanam</h2>
-    <p class="preloader-mantra" data-en="|| Om Namo Bhagavate Vasudevaya ||" data-te="|| ఓం నమో భగవతే వాసుదేవాయ ||">|| Om Namo Bhagavate Vasudevaya ||</p>
+    <h2 class="preloader-title" data-en="Ahobilam Devasthanam" data-te="అహోబిలం దేవస్థానం" data-ta="அகோபிலம் தேவஸ்தானம்" data-kn="ಅಹೋಬಿಲಂ ದೇವಸ್ಥಾನ">Ahobilam Devasthanam</h2>
+    <p class="preloader-mantra" data-en="|| Om Namo Bhagavate Vasudevaya ||" data-te="|| ఓం నమో భగవతే వాసుదేవాయ ||" data-ta="|| ஓம் நமோ பகவதே வாசுதேவாய ||" data-kn="|| ಓಂ ನಮೋ ಭಗವತೇ ವಾಸುದೇವಾಯ ||">|| Om Namo Bhagavate Vasudevaya ||</p>
   </div>
 </div>
 
@@ -52,6 +52,8 @@
       <select id="lang-select" onchange="changeLang(this.value)">
         <option value="en">English</option>
         <option value="te">తెలుగు</option>
+        <option value="ta">தமிழ்</option>
+        <option value="kn">ಕನ್ನಡ</option>
       </select>
     </span>
   </div>
@@ -64,25 +66,26 @@
       <div class="logo-emblem">🕉</div>
       <div class="logo-text">
         <h1 class="site-title">Ahobilam Devasthanam</h1>
-        <p class="site-subtitle" data-en="Sacred Abode of Nava Narasimha" data-te="నవ నరసింహ పవిత్ర నివాసం">Sacred Abode of Nava Narasimha</p>
+        <p class="site-subtitle" data-en="Sacred Abode of Nava Narasimha" data-te="నవ నరసింహ పవిత్ర నివాసం" data-ta="நவ நரசிம்மரின் புனித இருப்பிடம்" data-kn="ನವ ನರಸಿಂಹನ ಪವಿತ್ರ ಧಾಮ">Sacred Abode of Nava Narasimha</p>
       </div>
     </div>
     <nav id="main-nav">
       <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">☰</button>
       <ul class="nav-links" id="nav-links">
         <li class="nav-item dropdown">
-          <a href="#hero" class="dropdown-toggle" data-en="Home ▾" data-te="హోమ్ ▾">Home ▾</a>
+          <a href="#hero" class="dropdown-toggle" data-en="Home ▾" data-te="హోమ్ ▾" data-ta="முகப்பு ▾" data-kn="ಮುಖಪುಟ ▾">Home ▾</a>
           <ul class="dropdown-menu">
-            <li><a href="#sevas" onclick="showSevaTab('sevas-list')" data-en="Sevas" data-te="సేవలు">Sevas</a></li>
-            <li><a href="#timings" data-en="Darshans" data-te="దర్శనాలు">Darshans</a></li>
-            <li><a href="#sevas" onclick="showSevaTab('donations-list')" data-en="E-Hundi" data-te="ఇ-హుండీ">E-Hundi</a></li>
-            <li><a href="#visit" onclick="showVisitTab('accommodation-info')" data-en="Accommodation" data-te="వసతి సౌకర్యాలు">Accommodation</a></li>
-            <li><a href="#guides" data-en="Guide" data-te="గైడ్ సేవలు">Guide</a></li>
-            <li><a href="#news-events" data-en="Updates" data-te="అప్‌డేట్స్">Updates</a></li>
+            <li><a href="#sevas" onclick="showSevaTab('sevas-list')" data-en="Sevas" data-te="సేవలు" data-ta="சேவைகள்" data-kn="ಸೇವೆಗಳು">Sevas</a></li>
+            <li><a href="#timings" data-en="Darshans" data-te="దర్శనాలు" data-ta="தரிசனங்கள்" data-kn="ದರ್ಶನಗಳು">Darshans</a></li>
+            <li><a href="#sevas" onclick="showSevaTab('donations-list')" data-en="E-Hundi" data-te="ఇ-హుండీ" data-ta="இ-உண்டியல்" data-kn="ಇ-ಹುಂಡಿ">E-Hundi</a></li>
+            <li><a href="#visit" onclick="showVisitTab('accommodation-info')" data-en="Accommodation" data-te="వసతి సౌకర్యాలు" data-ta="தங்கும் வசதி" data-kn="ವಸತಿ ಸೌಕರ್ಯಗಳು">Accommodation</a></li>
+            <li><a href="#guides" data-en="Guide" data-te="గైడ్ సేవలు" data-ta="வழிகாட்டி" data-kn="ಮಾರ್ಗದರ್ಶಿ">Guide</a></li>
+            <li><a href="#news-events" data-en="Updates" data-te="అప్‌డేట్స్" data-ta="செய்திகள்" data-kn="ನವೀಕರಣಗಳು">Updates</a></li>
           </ul>
         </li>
-        <li><a href="#news-events" data-en="News &amp; Events" data-te="తాజా సమాచారం &amp; ఈవెంట్స్">News &amp; Events</a></li>
-        <li><a href="#gallery" data-en="Gallery" data-te="గ్యాలరీ">Gallery</a></li>
+        <li><a href="#temples" data-en="Temples" data-te="ఆలయాలు" data-ta="கோயில்கள்" data-kn="ದೇವಾಲಯಗಳು">Temples</a></li>
+        <li><a href="#news-events" data-en="News &amp; Events" data-te="తాజా సమాచారం &amp; ఈవెంట్స్" data-ta="செய்திகள் &amp; நிகழ்வுகள்" data-kn="ಸುದ್ದಿ ಮತ್ತು ಘಟನೆಗಳು">News &amp; Events</a></li>
+        <li><a href="#gallery" data-en="Gallery" data-te="గ్యాలరీ" data-ta="புகைப்பட தொகுப்பு" data-kn="ಛಾಯಾಗ್ರหಣ ಗ್ಯಾಲರಿ">Gallery</a></li>
       </ul>
     </nav>
   </div>
@@ -93,7 +96,7 @@
   <div class="hero-overlay"></div>
   <div class="hero-content">
     <p class="hero-tag">108 Divya Desams · Kurnool District, Andhra Pradesh</p>
-    <h2 class="hero-title" data-en="Nava Narasimha Kshetram" data-te="నవ నరసింహ క్షేత్రం">Nava Narasimha Kshetram</h2>
+    <h2 class="hero-title" data-en="Nava Narasimha Kshetram" data-te="నవ నరసింహ క్షేత్రం" data-ta="நவ நரசிம்ம க்ஷேத்திரம்" data-kn="ನವ ನರಸಿಂಹ ಕ್ಷೇತ್ರ">Nava Narasimha Kshetram</h2>
     <p class="hero-sub">Where the Lord appeared in nine divine forms amidst the sacred Eastern Ghats</p>
     <div class="hero-buttons">
       <a href="#temples" class="btn btn-primary">Explore Temples</a>
@@ -523,11 +526,11 @@
       <div class="divider-ornament">⸻ ✦ ⸻</div>
     </div>
     <div class="visit-tabs">
-      <button class="vtab active" onclick="showVisitTab('how-to-reach')" data-en="How to Reach" data-te="చేరుకోవడం ఎలా">How to Reach</button>
-      <button class="vtab" onclick="showVisitTab('best-time')" data-en="Best Time to Visit" data-te="సందర్శనకు ఉత్తమ సమయం">Best Time to Visit</button>
-      <button class="vtab" onclick="showVisitTab('distances')" data-en="Distances" data-te="దూరాలు">Distances</button>
-      <button class="vtab" onclick="showVisitTab('transport-local')" data-en="Local Transport" data-te="స్థానిక రవాణా">Local Transport</button>
-      <button class="vtab" onclick="showVisitTab('accommodation-info')" data-en="Accommodation" data-te="వసతి సౌకర్యాలు">Accommodation</button>
+      <button class="vtab active" onclick="showVisitTab('how-to-reach')" data-en="How to Reach" data-te="చేరుకోవడం ఎలా" data-ta="அடைவது எப்படி" data-kn="ತಲುಪುವುದು ಹೇಗೆ">How to Reach</button>
+      <button class="vtab" onclick="showVisitTab('best-time')" data-en="Best Time to Visit" data-te="సందర్శనకు ఉత్తమ సమయం" data-ta="சந்திக்க சிறந்த நேரம்" data-kn="ಭೇಟಿ ನೀಡಲು ಉತ್ತಮ ಸಮಯ">Best Time to Visit</button>
+      <button class="vtab" onclick="showVisitTab('distances')" data-en="Distances" data-te="దూరాలు" data-ta="தூரங்கள்" data-kn="ದೂರಗಳು">Distances</button>
+      <button class="vtab" onclick="showVisitTab('transport-local')" data-en="Local Transport" data-te="స్థానిక రవాణా" data-ta="உள்ளூர் போக்குவரத்து" data-kn="ಸ್ಥಳೀಯ ಸಾರಿಗೆ">Local Transport</button>
+      <button class="vtab" onclick="showVisitTab('accommodation-info')" data-en="Accommodation" data-te="వసతి సౌకర్యాలు" data-ta="தங்கும் வசதி" data-kn="ವಸತಿ ಸೌಕರ್ಯಗಳು">Accommodation</button>
     </div>
 
     <div id="how-to-reach" class="visit-tab active">
@@ -642,37 +645,37 @@
     <div id="accommodation-info" class="visit-tab">
       <div class="accommodation-grid">
         <div class="accommodation-card">
-          <h4 data-en="Malola Guest House" data-te="మాలోల గెస్ట్ హౌస్">Malola Guest House</h4>
-          <span class="price-range" data-en="₹ 500 – ₹ 1,500 / night" data-te="₹ 500 – ₹ 1,500 / రాత్రి">₹ 500 – ₹ 1,500 / night</span>
+          <h4 data-en="Malola Guest House" data-te="మాలోల గెస్ట్ హౌస్" data-ta="மாலோலா விருந்தினர் இல்லம்" data-kn="ಮಾಲೋಲ ಅತಿಥಿ ಗೃಹ">Malola Guest House</h4>
+          <span class="price-range" data-en="₹ 500 – ₹ 1,500 / night" data-te="₹ 500 – ₹ 1,500 / రాత్రి" data-ta="₹ 500 – ₹ 1,500 / இரவு" data-kn="₹ 500 – ₹ 1,500 / ರಾತ್ರಿ">₹ 500 – ₹ 1,500 / night</span>
           <ul>
-            <li><strong data-en="Rooms:" data-te="గదులు:">Rooms:</strong> <span data-en="AC & Non-AC rooms available" data-te="ఏసీ & నాన్ ఏసీ గదులు కలవు">AC & Non-AC rooms available</span></li>
-            <li><strong data-en="Location:" data-te="ప్రదేశం:">Location:</strong> <span data-en="Near Lower Ahobilam Temple" data-te="దిగువ అహోబిలం ఆలయ సమీపంలో">Near Lower Ahobilam Temple</span></li>
-            <li><strong data-en="Management:" data-te="నిర్వహణ:">Management:</strong> <span data-en="Official Devasthanam Board" data-te="అధికారిక దేవస్థానం బోర్డు">Official Devasthanam Board</span></li>
-            <li><strong data-en="Phone:" data-te="ఫోన్:">Phone:</strong> <span>08519-252045</span></li>
+            <li><strong data-en="Rooms:" data-te="గదులు:" data-ta="அறைகள்:" data-kn="ಕೋಣೆಗಳು:">Rooms:</strong> <span data-en="AC & Non-AC rooms available" data-te="ఏసీ & నాన్ ఏసీ గదులు కలవు" data-ta="ஏசி மற்றும் ஏசி அல்லாத அறைகள் உள்ளன" data-kn="ಎಸಿ ಮತ್ತು ನಾನ್-ಎಸಿ ಕೊಠಡಿಗಳು ಲಭ್ಯವಿದೆ">AC & Non-AC rooms available</span></li>
+            <li><strong data-en="Location:" data-te="ప్రదేశం:" data-ta="இடம்:" data-kn="ಸ್ಥಳ:">Location:</strong> <span data-en="Near Lower Ahobilam Temple" data-te="దిగువ అహోబిలం ఆలయ సమీపంలో" data-ta="கீழ் அகோபிலம் கோயில் அருகில்" data-kn="ಕೆಳಗಿನ ಅಹೋಬಿಲಂ ದೇವಾಲಯದ ಹತ್ತಿರ">Near Lower Ahobilam Temple</span></li>
+            <li><strong data-en="Management:" data-te="నిర్వహణ:" data-ta="நிர்வாகம்:" data-kn="ವ್ಯವಸ್ಥಾಪನೆ:">Management:</strong> <span data-en="Official Devasthanam Board" data-te="అధికారిక దేవస్థానం బోర్డు" data-ta="அதிகாரப்பூர்வ தேவஸ்தான வாரியம்" data-kn="ಅಧಿಕೃತ ದೇವಸ್ಥಾನ ಮಂಡಳಿ">Official Devasthanam Board</span></li>
+            <li><strong data-en="Phone:" data-te="ఫోన్:" data-ta="தொலைபேசி:" data-kn="ದೂರವಾಣಿ:">Phone:</strong> <span>08519-252045</span></li>
           </ul>
-          <a href="#contact" class="btn-book" data-en="Book Now" data-te="ఇప్పుడే బుక్ చేయండి">Book Now</a>
+          <a href="#contact" class="btn-book" data-en="Book Now" data-te="ఇప్పుడే బుక్ చేయండి" data-ta="இப்போதே முன்பதிவு செய்க" data-kn="ಈಗಲೇ ಕಾಯ್ದಿರಿಸಿ">Book Now</a>
         </div>
         <div class="accommodation-card">
-          <h4 data-en="Haritha Hotel (APTDC)" data-te="హరిత హోటల్ (APTDC)">Haritha Hotel (APTDC)</h4>
-          <span class="price-range" data-en="₹ 1,200 – ₹ 2,500 / night" data-te="₹ 1,200 – ₹ 2,500 / రాత్రి">₹ 1,200 – ₹ 2,500 / night</span>
+          <h4 data-en="Haritha Hotel (APTDC)" data-te="హరిత హోటల్ (APTDC)" data-ta="ஹரிதா ஹோட்டல் (APTDC)" data-kn="ಹರಿತ ಹೋಟೆಲ್ (APTDC)">Haritha Hotel (APTDC)</h4>
+          <span class="price-range" data-en="₹ 1,200 – ₹ 2,500 / night" data-te="₹ 1,200 – ₹ 2,500 / రాత్రి" data-ta="₹ 1,200 – ₹ 2,500 / இரவு" data-kn="₹ 1,200 – ₹ 2,500 / ರಾತ್ರಿ">₹ 1,200 – ₹ 2,500 / night</span>
           <ul>
-            <li><strong data-en="Rooms:" data-te="గదులు:">Rooms:</strong> <span data-en="Deluxe AC, Non-AC & Suite rooms" data-te="డీలక్స్ ఏసీ, నాన్-ఏసీ & సూట్లు">Deluxe AC, Non-AC & Suite rooms</span></li>
-            <li><strong data-en="Facilities:" data-te="సదుపాయాలు:">Facilities:</strong> <span data-en="In-house restaurant & parking" data-te="రెస్టారెంట్ & పార్కింగ్ కలవు">In-house restaurant & parking</span></li>
-            <li><strong data-en="Location:" data-te="ప్రదేశం:">Location:</strong> <span data-en="1 km from Lower Ahobilam" data-te="దిగువ అహోబిలానికి 1 కి.మీ">1 km from Lower Ahobilam</span></li>
-            <li><strong data-en="Booking:" data-te="బుకింగ్:">Booking:</strong> <span data-en="Online via tourism portal" data-te="ఆన్‌లైన్ ద్వారా">Online via tourism portal</span></li>
+            <li><strong data-en="Rooms:" data-te="గదులు:" data-ta="அறைகள்:" data-kn="ಕೋಣೆಗಳು:">Rooms:</strong> <span data-en="Deluxe AC, Non-AC & Suite rooms" data-te="డీలక్స్ ఏసీ, నాన్-ఏసీ & సూట్లు" data-ta="டீலக்ஸ் ஏசி, ஏசி அல்லாத &amp; சூட் அறைகள்" data-kn="ಡೀಲಕ್ಸ್ ಎಸಿ, ನಾನ್-ಎಸಿ ಮತ್ತು ಸೂಟ್ ಕೊಠಡಿಗಳು">Deluxe AC, Non-AC & Suite rooms</span></li>
+            <li><strong data-en="Facilities:" data-te="సదుపాయాలు:" data-ta="வசதிகள்:" data-kn="ಸೌಲಭ್ಯಗಳು:">Facilities:</strong> <span data-en="In-house restaurant & parking" data-te="రెస్టారెంట్ & పార్కింగ్ కలవు" data-ta="உணவகம் &amp; வாகன நிறுத்துமிடம் உள்ளது" data-kn="ಉಪಹಾರ ಗೃಹ ಮತ್ತು ಪಾರ್ಕಿಂಗ್">In-house restaurant & parking</span></li>
+            <li><strong data-en="Location:" data-te="ప్రదేశం:" data-ta="இடம்:" data-kn="ಸ್ಥಳ:">Location:</strong> <span data-en="1 km from Lower Ahobilam" data-te="దిగువ అహోబిలానికి 1 కి.మీ" data-ta="கீழ் அகோபிலத்தில் இருந்து 1 கி.மீ." data-kn="ಕೆಳಗಿನ ಅಹೋಬಿಲಂನಿಂದ ೧ ಕಿ.ಮೀ">1 km from Lower Ahobilam</span></li>
+            <li><strong data-en="Booking:" data-te="బుకింగ్:" data-ta="முன்பதிவு:" data-kn="ಬುಕಿಂಗ್:">Booking:</strong> <span data-en="Online via tourism portal" data-te="ఆన్‌లైన్ ద్వారా" data-ta="சுற்றுலா தளம் மூலம் ஆன்லைனில்" data-kn="ಪ್ರವಾಸೋದ್ಯಮ ಪೋರ್ಟಲ್ ಮೂಲಕ ಆನ್‌ಲೈನ್">Online via tourism portal</span></li>
           </ul>
-          <a href="https://tourism.ap.gov.in" target="_blank" class="btn-book" data-en="Book Online" data-te="ఆన్‌లైన్ బుకింగ్">Book Online</a>
+          <a href="https://tourism.ap.gov.in" target="_blank" class="btn-book" data-en="Book Online" data-te="ఆన్‌లైన్ బుకింగ్" data-ta="ஆன்லைனில் முன்பதிவு செய்க" data-kn="ಆನ್‌ಲೈನ್ ಬುಕಿಂಗ್">Book Online</a>
         </div>
         <div class="accommodation-card">
-          <h4 data-en="Sri Ahobila Mutt Guest House" data-te="శ్రీ అహోబిల మఠం గెస్ట్ హౌస్">Sri Ahobila Mutt Guest House</h4>
-          <span class="price-range" data-en="Donation-based / Nominal" data-te="విరాళం ఆధారిత / నామమాత్రపు">Donation-based / Nominal</span>
+          <h4 data-en="Sri Ahobila Mutt Guest House" data-te="శ్రీ అహోబిల మఠం గెస్ట్ హౌస్" data-ta="ஸ்ரீ அகோபில மடம் விருந்தினர் இல்லம்" data-kn="ಶ್ರೀ ಅಹೋಬಿಲ ಮಠದ ಅತಿಥಿ ಗೃಹ">Sri Ahobila Mutt Guest House</h4>
+          <span class="price-range" data-en="Donation-based / Nominal" data-te="విరాళం ఆధారిత / నామమాత్రపు" data-ta="நன்கொடை அடிப்படையில் / பெயரளவு கட்டணம்" data-kn="ದೇಣಿಗೆ ಆಧಾರಿತ / ಅತ್ಯಲ್ಪ ಶುಲ್ಕ">Donation-based / Nominal</span>
           <ul>
-            <li><strong data-en="Rooms:" data-te="గదులు:">Rooms:</strong> <span data-en="Traditional pilgrim rooms" data-te="సాంప్రదాయ గదులు">Traditional pilgrim rooms</span></li>
-            <li><strong data-en="Location:" data-te="ప్రదేశం:">Location:</strong> <span data-en="Very close to Lower Temple" data-te="దిగువ ఆలయానికి చాలా దగ్గరగా">Very close to Lower Temple</span></li>
-            <li><strong data-en="Ideal for:" data-te="అనువైనవి:">Ideal for:</strong> <span data-en="Mutt devotees & spiritual groups" data-te="మఠ భక్తులు & ఆధ్యాత్మిక బృందాలు">Mutt devotees & spiritual groups</span></li>
-            <li><strong data-en="Phone:" data-te="ఫోన్:">Phone:</strong> <span>08519-252024</span></li>
+            <li><strong data-en="Rooms:" data-te="గదులు:" data-ta="அறைகள்:" data-kn="ಕೋಣೆಗಳು:">Rooms:</strong> <span data-en="Traditional pilgrim rooms" data-te="సాంప్రదాయ గదులు" data-ta="பாரம்பரிய யாத்ரீகர்கள் அறைகள்" data-kn="ಸಾಂಪ್ರದಾಯಿಕ ಯಾತ್ರಿಕರ ಕೊಠಡಿಗಳು">Traditional pilgrim rooms</span></li>
+            <li><strong data-en="Location:" data-te="ప్రదేశం:" data-ta="இடம்:" data-kn="ಸ್ಥಳ:">Location:</strong> <span data-en="Very close to Lower Temple" data-te="దిగువ ఆలయానికి చాలా దగ్గరగా" data-ta="கீழ் கோயிலுக்கு மிக அருகில்" data-kn="ಕೆಳಗಿನ ದೇವಾಲಯಕ್ಕೆ ತುಂಬಾ ಹತ್ತಿರದಲ್ಲಿದೆ">Very close to Lower Temple</span></li>
+            <li><strong data-en="Ideal for:" data-te="అనువైనవి:" data-ta="சிறந்தது:" data-kn="ಅನುಕೂಲಕರ:">Ideal for:</strong> <span data-en="Mutt devotees & spiritual groups" data-te="మఠ భక్తులు & ఆధ్యాత్మిక బృందాలు" data-ta="மடத்தின் பக்தர்கள் &amp; ஆன்மீகக் குழுக்கள்" data-kn="ಮಠದ ಭಕ್ತರು ಮತ್ತು ಆಧ್ಯಾತ್ಮಿಕ ಗುಂಪುಗಳು">Mutt devotees & spiritual groups</span></li>
+            <li><strong data-en="Phone:" data-te="ఫోన్:" data-ta="தொலைபேசி:" data-kn="ದೂರವಾಣಿ:">Phone:</strong> <span>08519-252024</span></li>
           </ul>
-          <a href="#contact" class="btn-book" data-en="Enquire" data-te="విచారించండి">Enquire</a>
+          <a href="#contact" class="btn-book" data-en="Enquire" data-te="విచారించండి" data-ta="விசாரிப்பு" data-kn="ವಿಚಾರಿಸಿ">Enquire</a>
         </div>
       </div>
     </div>
@@ -869,72 +872,72 @@
 <section id="news-events" class="section section-light">
   <div class="container">
     <div class="section-header">
-      <span class="section-tag" data-en="Latest News" data-te="తాజా విశేషాలు">Latest News</span>
-      <h2 class="section-title" data-en="News &amp; Events" data-te="వార్తలు &amp; ఈవెంట్స్">News &amp; Events</h2>
+      <span class="section-tag" data-en="Latest News" data-te="తాజా విశేషాలు" data-ta="சமீபத்திய செய்திகள்" data-kn="ಇತ್ತೀಚಿನ ಸುದ್ದಿ">Latest News</span>
+      <h2 class="section-title" data-en="News &amp; Events" data-te="వార్తలు &amp; ఈవెంట్స్" data-ta="செய்திகள் &amp; நிகழ்வுகள்" data-kn="ಸುದ್ದಿ ಮತ್ತು ಘಟನೆಗಳು">News &amp; Events</h2>
       <div class="divider-ornament">⸻ ✦ ⸻</div>
-      <p class="section-desc" data-en="Stay updated with the latest happenings, festivals, and notifications from the Devasthanam" data-te="దేవస్థానం నుండి తాజా సమాచారం, ఉత్సవాలు మరియు నోటిఫికేషన్లతో అప్‌డేట్‌గా ఉండండి">Stay updated with the latest happenings, festivals, and notifications from the Devasthanam</p>
+      <p class="section-desc" data-en="Stay updated with the latest happenings, festivals, and notifications from the Devasthanam" data-te="దేవస్థానం నుండి తాజా సమాచారం, ఉత్సవాలు మరియు నోటిఫికేషన్లతో అప్‌డేట్‌గా ఉండండి" data-ta="தேவஸ்தானத்தின் சமீபத்திய நிகழ்வுகள், திருவிழாக்கள் மற்றும் அறிவிப்புகளை உடனுக்குடன் தெரிந்து கொள்ளுங்கள்" data-kn="ದೇವಸ್ಥಾನದ ಇತ್ತೀಚಿನ ಘಟನೆಗಳು, ಉತ್ಸವಗಳು ಮತ್ತು ಪ್ರಕಟಣೆಗಳೊಂದಿಗೆ ನವೀಕೃತವಾಗಿರಿ">Stay updated with the latest happenings, festivals, and notifications from the Devasthanam</p>
     </div>
     
     <div class="news-events-grid">
       <!-- Latest Announcements -->
       <div class="news-feed">
-        <h3 data-en="Announcements &amp; Updates" data-te="ప్రకటనలు &amp; అప్‌డేట్స్">Announcements &amp; Updates</h3>
+        <h3 data-en="Announcements &amp; Updates" data-te="ప్రకటనలు &amp; అప్‌డేట్స్" data-ta="அறிவிப்புகள் &amp; செய்திகள்" data-kn="ಘೋಷಣೆಗಳು ಮತ್ತು ನವೀಕರಣಗಳು">Announcements &amp; Updates</h3>
         
         <div class="news-card">
           <div class="news-date">June 2, 2026</div>
-          <h4 data-en="Swathi Nakshatra Thirumanjanam Scheduled" data-te="స్వాతి నక్షత్ర తిరుమంజన కార్యక్రమం సిద్ధం">Swathi Nakshatra Thirumanjanam Scheduled</h4>
-          <p data-en="The monthly Swathi Nakshatra Thirumanjanam for all nine Narasimha shrines will be performed on June 15. Devotees can book their Sankalpam online or at the counter." data-te="అన్ని నవ నరసింహ ఆలయాలలో ఈ నెల జూన్ 15న మాస స్వాతి నక్షత్ర అభిషేకం మరియు తిరుమంజనం జరగనుంది. భక్తులు ఆన్‌లైన్ లేదా కౌంటర్ ద్వారా సంకల్పం బుక్ చేసుకోవచ్చు.">The monthly Swathi Nakshatra Thirumanjanam for all nine Narasimha shrines will be performed on June 15. Devotees can book their Sankalpam online or at the counter.</p>
+          <h4 data-en="Swathi Nakshatra Thirumanjanam Scheduled" data-te="స్వాతి నక్షత్ర తిరుమంజన కార్యక్రమం సిద్ధం" data-ta="சுவாதி நட்சத்திர திருமஞ்சனம் அறிவிக்கப்பட்டுள்ளது" data-kn="ಸ್ವಾತಿ ನಕ್ಷತ್ರದ ತಿರುಮಂಜನ ನಿಗದಿಪಡಿಸಲಾಗಿದೆ">Swathi Nakshatra Thirumanjanam Scheduled</h4>
+          <p data-en="The monthly Swathi Nakshatra Thirumanjanam for all nine Narasimha shrines will be performed on June 15. Devotees can book their Sankalpam online or at the counter." data-te="అన్ని నవ నరసింహ ఆలయాలలో ఈ నెల జూన్ 15న మాస స్వాతి నక్షత్ర అభిషేకం మరియు తిరుమంజనం జరగనుంది. భక్తులు ఆన్‌లైన్ లేదా కౌంటర్ ద్వారా సంకల్పం బుక్ చేసుకోవచ్చు." data-ta="ஒன்பது நரசிம்மர் சன்னதிகளிலும் மாதாந்திர சுவாதி நட்சத்திர திருமஞ்சனம் ஜூன் 15 அன்று நடைபெறும். பக்தர்கள் தங்கள் சங்கல்பத்தை ஆன்லைனிலோ அல்லது கவுண்டரிலோ முன்பதிவு செய்யலாம்." data-kn="ಎಲ್ಲಾ ಒಂಬತ್ತು ನರಸಿಂಹ ದೇವಾಲಯಗಳಿಗೆ maasika ಸ್ವಾತಿ ನಕ್ಷತ್ರ ತಿರುಮಂಜನವನ್ನು ಜೂನ್ 15 ರಂದು ಆಚರಿಸಲಾಗುವುದು. ಭಕ್ತರು ತಮ್ಮ ಸಂಕಲ್ಪವನ್ನು ಆನ್‌ಲೈನ್‌ನಲ್ಲಿ ಅಥವಾ ಕೌಂಟರ್‌ನಲ್ಲಿ ಕಾಯ್ದಿರಿಸಬಹುದು.">The monthly Swathi Nakshatra Thirumanjanam for all nine Narasimha shrines will be performed on June 15. Devotees can book their Sankalpam online or at the counter.</p>
         </div>
 
         <div class="news-card">
           <div class="news-date">May 28, 2026</div>
-          <h4 data-en="New Trekking Guidelines Issued" data-te="కొత్త ట్రెక్కింగ్ మార్గదర్శకాలు జారీ">New Trekking Guidelines Issued</h4>
-          <p data-en="In view of early summer rains, pilgrims trekking to Jwala Narasimha and Ugra Stambham are advised to start before 9:00 AM and travel in groups with registered forest guides." data-te="అకాల వేసవి వర్షాల కారణంగా, జ్వాలా నరసింహ మరియు ఉగ్రస్తంభం వెళ్లే భక్తులు ఉదయం 9:00 గంటలలోపు ప్రయాణం ప్రారంభించాలని మరియు రిజిస్టర్డ్ గైడ్‌లతో మాత్రమే వెళ్ళాలని కోరడమైనది.">In view of early summer rains, pilgrims trekking to Jwala Narasimha and Ugra Stambham are advised to start before 9:00 AM and travel in groups with registered forest guides.</p>
+          <h4 data-en="New Trekking Guidelines Issued" data-te="కొత్త ట్రెక్కింగ్ మార్గదర్శకాలు జారీ" data-ta="புதிய மலையேற்ற வழிகாட்டுதல்கள் வெளியிடப்பட்டுள்ளன" data-kn="ಹೊಸ ಟ್ರೆಕ್ಕಿಂಗ್ ಮಾರ್ಗಸೂಚಿಗಳನ್ನು ಬಿಡುಗಡೆ ಮಾಡಲಾಗಿದೆ">New Trekking Guidelines Issued</h4>
+          <p data-en="In view of early summer rains, pilgrims trekking to Jwala Narasimha and Ugra Stambham are advised to start before 9:00 AM and travel in groups with registered forest guides." data-te="అకాల వేసవి వర్షాల కారణంగా, జ్వాలా నరసింహ మరియు ఉగ్రస్తంభం వెళ్లే భక్తులు ఉదయం 9:00 గంటలలోపు ప్రయాణం ప్రారంభించాలని మరియు రిజిస్టర్డ్ గైడ్‌లతో మాత్రమే వెళ్ళాలని కోరడమైనది." data-ta="ஆரம்பகால கோடை மழையின் காரணமாக, ஜுவாலா நரசிம்மர் மற்றும் உக்கிர ஸ்தம்பத்திற்கு செல்லும் யாத்ரீகர்கள் காலை 9:00 மணிக்கு முன்பாக பயணத்தைத் தொடங்கவும், பதிவு செய்யப்பட்ட வன வழிகாட்டிகளுடன் குழுக்களாகச் செல்லவும் அறிவுறுத்தப்படுகிறார்கள்." data-kn="ಬೇಸಿಗೆಯ ಆರಂಭಿಕ ಮಳೆಯ ಹಿನ್ನೆಲೆಯಲ್ಲಿ, ಜ್ವಾಲಾ ನರಸಿಂಹ ಮತ್ತು ಉಗ್ರ ಸ್ತಂಭಕ್ಕೆ ಟ್ರೆಕ್ಕಿಂಗ್ ಮಾಡುವ ಯಾತ್ರಾರ್ಥಿಗಳು ಬೆಳಿಗ್ಗೆ 9:00 ಕ್ಕಿಂತ ಮೊದಲು ಪ್ರಾರಂಭಿಸಲು ಮತ್ತು ನೋಂದಾಯಿತ ಅರಣ್ಯ ಮಾರ್ಗದರ್ಶಿಗಳೊಂದಿಗೆ ಗುಂಪುಗಳಲ್ಲಿ ಪ್ರಯಾಣಿಸಲು ಸೂಚಿಸಲಾಗಿದೆ.">In view of early summer rains, pilgrims trekking to Jwala Narasimha and Ugra Stambham are advised to start before 9:00 AM and travel in groups with registered forest guides.</p>
         </div>
 
         <div class="news-card">
           <div class="news-date">May 15, 2026</div>
-          <h4 data-en="Free Annadanam Hall Timings Extended" data-te="ఉచిత అన్నదాన సత్రం సమయాల పెంపు">Free Annadanam Hall Timings Extended</h4>
-          <p data-en="To accommodate the summer rush, the Nitya Annadanam Prasadam Hall will now remain open from 11:30 AM to 3:30 PM daily, serving traditional prasadam meals to all pilgrims." data-te="వేసవి సెలవుల రద్దీ దృష్ట్యా నిత్య అన్నదాన ప్రసాద వితరణ సమయాన్ని ఉదయం 11:30 నుండి మధ్యాహ్నం 3:30 వరకు పొడిగించడమైనది. భక్తులందరూ దీనిని గమనించగలరు.">To accommodate the summer rush, the Nitya Annadanam Prasadam Hall will now remain open from 11:30 AM to 3:30 PM daily, serving traditional prasadam meals to all pilgrims.</p>
+          <h4 data-en="Free Annadanam Hall Timings Extended" data-te="ఉచిత అన్నదాన సత్రం సమయాల పెంపు" data-ta="இலவச அன்னதான மண்டப நேரம் நீட்டிக்கப்பட்டுள்ளது" data-kn="ಉಚಿತ ಅನ್ನದಾನ ಭವನದ ಸಮಯವನ್ನು ವಿಸ್ತರಿಸಲಾಗಿದೆ">Free Annadanam Hall Timings Extended</h4>
+          <p data-en="To accommodate the summer rush, the Nitya Annadanam Prasadam Hall will now remain open from 11:30 AM to 3:30 PM daily, serving traditional prasadam meals to all pilgrims." data-te="వేసవి సెలవుల రద్దీ దృష్ట్యా నిత్య అన్నదాన ప్రసాద వితరణ సమయాన్ని ఉదయం 11:30 నుండి మధ్యాహ్నం 3:30 వరకు పొడిగించడమైనది. భక్తులందరూ దీనిని గమనించగలరు." data-ta="கோடைக்கால நெரிசலைச் சமாளிக்க, நித்திய அன்னதான பிரசாத மண்டபம் தினமும் காலை 11:30 மணி முதல் மாலை 3:30 மணி வரை திறந்திருக்கும், யாத்ரீகர்கள் அனைவருக்கும் பாரம்பரிய பிரசாத உணவு வழங்கப்படும்." data-kn="ಬೇಸಿಗೆಯ ರದ್ದತಿಯನ್ನು ನಿಭಾಯಿಸಲು, ನಿತ್ಯ ಅನ್ನದಾನ ಪ್ರಸಾದ ಭವನವು ಈಗ ಪ್ರತಿದಿನ ಬೆಳಿಗ್ಗೆ 11:30 ರಿಂದ ಮಧ್ಯಾಹ್ನ 3:30 ರವರೆಗೆ ತೆರೆದಿರುತ್ತದೆ, ಎಲ್ಲಾ ಯಾತ್ರಾರ್ಥಿಗಳಿಗೆ ಸಾಂಪ್ರದಾಯಿಕ ಪ್ರಸಾದ ಊಟವನ್ನು ನೀಡಲಾಗುತ್ತದೆ.">To accommodate the summer rush, the Nitya Annadanam Prasadam Hall will now remain open from 11:30 AM to 3:30 PM daily, serving traditional prasadam meals to all pilgrims.</p>
         </div>
       </div>
 
       <!-- Festival Calendar (Moved from Heritage) -->
       <div class="festival-calendar-wrapper">
-        <h3 data-en="Upcoming Festivals" data-te="రాబోయే పండుగలు">Upcoming Festivals</h3>
+        <h3 data-en="Upcoming Festivals" data-te="రాబోయే పండుగలు" data-ta="வரவிருக்கும் திருவிழாக்கள்" data-kn="ಮುಂಬರುವ ಹಬ್ಬಗಳು">Upcoming Festivals</h3>
         <div class="festival-calendar" style="margin-top:0;">
           <div class="festival-list">
             <div class="festival-item upcoming">
               <div class="f-date"><span class="f-month">FEB</span><span class="f-day">2026</span></div>
               <div class="f-info">
-                <h5 data-en="Brahmothsavam" data-te="బ్రహ్మోత్సవాలు">Brahmothsavam</h5>
-                <p data-en="10-day grand festival. Lord Prahlada Varadan processions. Thousands attend. Book accommodation early." data-te="10 రోజుల మహా ఉత్సవం. శ్రీ ప్రహ్లాద వరద నరసింహ స్వామి రథోత్సవాలు. భక్తులు వసతిని ముందుగానే బుక్ చేసుకోగలరు.">10-day grand festival. Lord Prahlada Varadan processions. Thousands attend. Book accommodation early.</p>
+                <h5 data-en="Brahmothsavam" data-te="బ్రహ్మోత్సవాలు" data-ta="பிரம்மோற்சவம்" data-kn="ಬ್ರಹ್ಮೋತ್ಸವ">Brahmothsavam</h5>
+                <p data-en="10-day grand festival. Lord Prahlada Varadan processions. Thousands attend. Book accommodation early." data-te="10 రోజుల మహా ఉత్సవం. శ్రీ ప్రహ్లాద వరద నరసింహ స్వామి రథోత్సవాలు. భక్తులు వసతిని ముందుగానే బుక్ చేసుకోగలరు." data-ta="10 நாள் மகா திருவிழா. பிரகலாத வரதன் ஊர்வலங்கள். ஆயிரக்கணக்கானோர் பங்கேற்பர். தங்கும் இடத்தை முன்னரே முன்பதிவு செய்க." data-kn="10 ದಿನಗಳ ಭವ್ಯ ಉತ್ಸವ. ಪ್ರಹ್ಲಾದ ವರದನ್ ಮೆರವಣಿಗೆಗಳು. ಸಾವಿರಾರು ಜನರು भागವಹಿಸುತ್ತಾರೆ. ವಸತಿಯನ್ನು ಮುಂಚಿತವಾಗಿ ಕಾಯ್ದಿರಿಸಿ.">10-day grand festival. Lord Prahlada Varadan processions. Thousands attend. Book accommodation early.</p>
               </div>
-              <span class="f-badge" data-en="Grand Festival" data-te="మహా ఉత్సవం">Grand Festival</span>
+              <span class="f-badge" data-en="Grand Festival" data-te="మహా ఉత్సవం" data-ta="பெருவிழா" data-kn="ಭವ್ಯ ಉತ್ಸವ">Grand Festival</span>
             </div>
             <div class="festival-item">
               <div class="f-date"><span class="f-month">Monthly</span><span class="f-day">Swathi</span></div>
               <div class="f-info">
-                <h5 data-en="Swathi Nakshatra – Thirumanjanam" data-te="స్వాతి నక్షత్రం - తిరుమంజనం">Swathi Nakshatra – Thirumanjanam</h5>
-                <p data-en="Monthly ritual bathing for all nine shrine deities. Special darshan and sevas." data-te="అన్ని తొమ్మిది ఆలయాల దేవతలకు ప్రతి నెలా జరిగే పవిత్ర అభిషేక మహోత్సవం. ప్రత్యేక దర్శనాలు.">Monthly ritual bathing for all nine shrine deities. Special darshan and sevas.</p>
+                <h5 data-en="Swathi Nakshatra – Thirumanjanam" data-te="స్వాతి నక్షత్రం - తిరుమంజనం" data-ta="சுவாதி நட்சத்திரம் - திருமஞ்சனம்" data-kn="ಸ್ವಾತಿ ನಕ್ಷತ್ರ - ತಿರುಮಂಜನ">Swathi Nakshatra – Thirumanjanam</h5>
+                <p data-en="Monthly ritual bathing for all nine shrine deities. Special darshan and sevas." data-te="అన్ని తొమ్మిది ఆలయాల దేవతలకు ప్రతి నెలా జరిగే పవిత్ర అభిషేక మహోత్సవం. ప్రత్యేక దర్శనాలు." data-ta="ஒன்பது சன்னதி மூர்த்திகளுக்கும் மாதாந்திர அபிஷேகம். சிறப்பு தரிசனம் மற்றும் சேவைகள்." data-kn="ಎಲ್ಲಾ ಒಂಬತ್ತು ದೇವಾಲಯದ ದೇವತೆಗಳಿಗೆ ಮಾಸಿಕ ಆಚರಣೆಯ ಜಲ-ಅಭಿಷೇಕ. ವಿಶೇಷ ದರ್ಶನ ಮತ್ತು ಸೇವೆಗಳು.">Monthly ritual bathing for all nine shrine deities. Special darshan and sevas.</p>
               </div>
-              <span class="f-badge" data-en="Monthly" data-te="ప్రతి నెల">Monthly</span>
+              <span class="f-badge" data-en="Monthly" data-te="ప్రతి నెల" data-ta="மாதாந்திர" data-kn="ಮಾಸಿಕ">Monthly</span>
             </div>
             <div class="festival-item">
               <div class="f-date"><span class="f-month">JAN</span><span class="f-day">Vaikunta</span></div>
               <div class="f-info">
-                <h5 data-en="Vaikunta Ekadashi" data-te="వైకుంఠ ఏకాదశి">Vaikunta Ekadashi</h5>
-                <p data-en="Most sacred Ekadashi — Vaikunta Dwara Darshan. Extended temple hours and special sevas." data-te="అత్యంత పవిత్రమైన ఉత్తర ద్వార దర్శనం. దేవాలయ వేళల పెంపు మరియు ప్రత్యేక పూజలు.">Most sacred Ekadashi — Vaikunta Dwara Darshan. Extended temple hours and special sevas.</p>
+                <h5 data-en="Vaikunta Ekadashi" data-te="వైకుంఠ ఏకాదశి" data-ta="வைகுண்ட ஏகாதசி" data-kn="ವೈಕುಂಠ ಏಕಾದಶಿ">Vaikunta Ekadashi</h5>
+                <p data-en="Most sacred Ekadashi — Vaikunta Dwara Darshan. Extended temple hours and special sevas." data-te="అత్యంత పవిత్రమైన ఉత్తర ద్వార దర్శనం. దేవాలయ వేళల పెంపు మరియు ప్రత్యేక పూజలు." data-ta="மிகவும் புனிதமான ஏகாதசி — வைகுண்ட துவார தரிசனம். நீட்டிக்கப்பட்ட கோயில் நேரங்கள் மற்றும் சிறப்பு சேவைகள்." data-kn="ಅತ್ಯಂತ ಪವಿತ್ರವಾದ ಏಕಾದಶಿ — ವೈಕುಂಠ ದ್ವಾರ ದರ್ಶನ. ವಿಸ್ತೃತ ದೇವಾಲಯದ ಸಮಯ ಮತ್ತು ವಿಶೇಷ ಸೇವೆಗಳು.">Most sacred Ekadashi — Vaikunta Dwara Darshan. Extended temple hours and special sevas.</p>
               </div>
-              <span class="f-badge" data-en="Major Festival" data-te="ముఖ్య పండుగ">Major Festival</span>
+              <span class="f-badge" data-en="Major Festival" data-te="ముఖ్య పండుగ" data-ta="முக்கிய திருவிழா" data-kn="ಪ್ರಮುಖ ಹಬ್ಬ">Major Festival</span>
             </div>
             <div class="festival-item">
               <div class="f-date"><span class="f-month">APR</span><span class="f-day">Ugadi</span></div>
               <div class="f-info">
-                <h5 data-en="Ugadi – Telugu New Year" data-te="ఉగాది – తెలుగు నూతన సంవత్సరం">Ugadi – Telugu New Year</h5>
-                <p data-en="New year celebrations with special poojas and Panchanga Sravanam." data-te="ప్రత్యేక పూజలతో కొత్త సంవత్సర వేడుకలు మరియు పంచాంగ శ్రవణం.">New year celebrations with special poojas and Panchanga Sravanam.</p>
+                <h5 data-en="Ugadi – Telugu New Year" data-te="ఉగాది – తెలుగు నూతన సంవత్సరం" data-ta="உகாதி - தெலுங்கு புத்தாண்டு" data-kn="ಯುಗಾದಿ – ತೆಲುಗು ಹೊಸ ವರ್ಷ">Ugadi – Telugu New Year</h5>
+                <p data-en="New year celebrations with special poojas and Panchanga Sravanam." data-te="ప్రత్యేక పూజలతో కొత్త సంవత్సర వేడుకలు మరియు పంచాంగ శ్రవణం." data-ta="சிறப்பு பூஜைகள் மற்றும் பஞ்சாங்க ஸ்ரவணத்துடன் புத்தாண்டு கொண்டாட்டங்கள்." data-kn="ವಿಶೇಷ ಪೂಜೆಗಳು ಮತ್ತು ಪಂಚಾಂಗ ಶ್ರವಣದೊಂದಿಗೆ ಹೊಸ ವರ್ಷದ ಆಚರಣೆಗಳು.">New year celebrations with special poojas and Panchanga Sravanam.</p>
               </div>
-              <span class="f-badge" data-en="Festival" data-te="పండుగ">Festival</span>
+              <span class="f-badge" data-en="Festival" data-te="పండుగ" data-ta="திருவிழா" data-kn="ಹಬ್ಬ">Festival</span>
             </div>
           </div>
         </div>
@@ -947,102 +950,102 @@
 <section id="gallery" class="section section-dark-bg">
   <div class="container">
     <div class="section-header light">
-      <span class="section-tag" data-en="Darshan Gallery" data-te="చిత్రమాలిక">Darshan Gallery</span>
-      <h2 class="section-title" data-en="Devasthanam Gallery" data-te="దేవస్థానం గ్యాలరీ">Devasthanam Gallery</h2>
+      <span class="section-tag" data-en="Darshan Gallery" data-te="చిత్రమాలిక" data-ta="தரிசன புகைப்பட தொகுப்பு" data-kn="ದರ್ಶನ ಗ್ಯಾಲರಿ">Darshan Gallery</span>
+      <h2 class="section-title" data-en="Devasthanam Gallery" data-te="దేవస్థానం గ్యాలరీ" data-ta="தேவஸ்தான புகைப்படங்கள்" data-kn="ದೇವಸ್ಥಾನ ಗ್ಯಾಲರಿ">Devasthanam Gallery</h2>
       <div class="divider-ornament">⸻ ✦ ⸻</div>
-      <p class="section-desc" data-en="Glimpses of the sacred shrines and divine deity forms of Nava Narasimha Kshetram" data-te="నవ నరసింహ క్షేత్రంలోని పవిత్ర ఆలయాలు మరియు దివ్య రూపాల చిత్రమాలిక">Glimpses of the sacred shrines and divine deity forms of Nava Narasimha Kshetram</p>
+      <p class="section-desc" data-en="Glimpses of the sacred shrines and divine deity forms of Nava Narasimha Kshetram" data-te="నవ నరసింహ క్షేత్రంలోని పవిత్ర ఆలయాలు మరియు దివ్య రూపాల చిత్రమాలిక" data-ta="நவ நரசிம்ம க்ஷேத்திரத்தின் புனித சன்னதிகள் மற்றும் திவ்ய திருவுருவங்களின் காட்சிகள்" data-kn="ನವ ನರಸಿಂಹ ಕ್ಷೇತ್ರದ ಪವಿತ್ರ ದೇವಾಲಯಗಳು ಮತ್ತು ದೈವಿಕ ಮೂರ್ತಿಗಳ ನೋಟ">Glimpses of the sacred shrines and divine deity forms of Nava Narasimha Kshetram</p>
     </div>
     
     <div class="gallery-grid">
       <div class="gallery-item" onclick="openLightbox('images/gallery (1).jpeg', this)">
         <img src="images/gallery (1).jpeg" alt="Devasthanam Gallery 1" loading="lazy" />
         <div class="gallery-overlay">
-          <h4 data-en="Image 1" data-te="చిత్రం 1">Image 1</h4>
-          <p data-en="Click to enlarge" data-te="పెద్దదిగా చూడడానికి క్లిక్ చేయండి">Click to enlarge</p>
+          <h4 data-en="Image 1" data-te="చిత్రం 1" data-ta="படம் 1" data-kn="ಚಿತ್ರ 1">Image 1</h4>
+          <p data-en="Click to enlarge" data-te="పెద్దదిగా చూడడానికి క్లిక్ చేయండి" data-ta="பெரிதாக்க கிளிக் செய்க" data-kn="ದೊಡ್ಡದಾಗಿಸಲು ಕ್ಲಿಕ್ ಮಾಡಿ">Click to enlarge</p>
         </div>
       </div>
       <div class="gallery-item" onclick="openLightbox('images/gallery (2).jpeg', this)">
         <img src="images/gallery (2).jpeg" alt="Devasthanam Gallery 2" loading="lazy" />
         <div class="gallery-overlay">
-          <h4 data-en="Image 2" data-te="చిత్రం 2">Image 2</h4>
-          <p data-en="Click to enlarge" data-te="పెద్దదిగా చూడడానికి క్లిక్ చేయండి">Click to enlarge</p>
+          <h4 data-en="Image 2" data-te="చిత్రం 2" data-ta="படம் 2" data-kn="ಚಿತ್ರ 2">Image 2</h4>
+          <p data-en="Click to enlarge" data-te="పెద్దదిగా చూడడానికి క్లిక్ చేయండి" data-ta="பெரிதாக்க கிளிக் செய்க" data-kn="ದೊಡ್ಡದಾಗಿಸಲು ಕ್ಲಿಕ್ ಮಾಡಿ">Click to enlarge</p>
         </div>
       </div>
       <div class="gallery-item" onclick="openLightbox('images/gallery (3).jpeg', this)">
         <img src="images/gallery (3).jpeg" alt="Devasthanam Gallery 3" loading="lazy" />
         <div class="gallery-overlay">
-          <h4 data-en="Image 3" data-te="చిత్రం 3">Image 3</h4>
-          <p data-en="Click to enlarge" data-te="పెద్దదిగా చూడడానికి క్లిక్ చేయండి">Click to enlarge</p>
+          <h4 data-en="Image 3" data-te="చిత్రం 3" data-ta="படம் 3" data-kn="ಚಿತ್ರ 3">Image 3</h4>
+          <p data-en="Click to enlarge" data-te="పెద్దదిగా చూడడానికి క్లిక్ చేయండి" data-ta="பெரிதாக்க கிளிக் செய்க" data-kn="ದೊಡ್ಡದಾಗಿಸಲು ಕ್ಲಿಕ್ ಮಾಡಿ">Click to enlarge</p>
         </div>
       </div>
       <div class="gallery-item" onclick="openLightbox('images/gallery (4).jpeg', this)">
         <img src="images/gallery (4).jpeg" alt="Devasthanam Gallery 4" loading="lazy" />
         <div class="gallery-overlay">
-          <h4 data-en="Image 4" data-te="చిత్రం 4">Image 4</h4>
-          <p data-en="Click to enlarge" data-te="పెద్దదిగా చూడడానికి క్లిక్ చేయండి">Click to enlarge</p>
+          <h4 data-en="Image 4" data-te="చిత్రం 4" data-ta="படம் 4" data-kn="ಚಿತ್ರ 4">Image 4</h4>
+          <p data-en="Click to enlarge" data-te="పెద్దదిగా చూడడానికి క్లిక్ చేయండి" data-ta="பெரிதாக்க கிளிக் செய்க" data-kn="ದೊಡ್ಡದಾಗಿಸಲು ಕ್ಲಿಕ್ ಮಾಡಿ">Click to enlarge</p>
         </div>
       </div>
       <div class="gallery-item" onclick="openLightbox('images/gallery (5).jpeg', this)">
         <img src="images/gallery (5).jpeg" alt="Devasthanam Gallery 5" loading="lazy" />
         <div class="gallery-overlay">
-          <h4 data-en="Image 5" data-te="చిత్రం 5">Image 5</h4>
-          <p data-en="Click to enlarge" data-te="పెద్దదిగా చూడడానికి క్లిక్ చేయండి">Click to enlarge</p>
+          <h4 data-en="Image 5" data-te="చిత్రం 5" data-ta="படம் 5" data-kn="ಚಿತ್ರ 5">Image 5</h4>
+          <p data-en="Click to enlarge" data-te="పెద్దదిగా చూడడానికి క్లిక్ చేయండి" data-ta="பெரிதாக்க கிளிக் செய்க" data-kn="ದೊಡ್ಡದಾಗಿಸಲು ಕ್ಲಿಕ್ ಮಾಡಿ">Click to enlarge</p>
         </div>
       </div>
       <div class="gallery-item" onclick="openLightbox('images/gallery (6).jpeg', this)">
         <img src="images/gallery (6).jpeg" alt="Devasthanam Gallery 6" loading="lazy" />
         <div class="gallery-overlay">
-          <h4 data-en="Image 6" data-te="చిత్రం 6">Image 6</h4>
-          <p data-en="Click to enlarge" data-te="పెద్దదిగా చూడడానికి క్లిక్ చేయండి">Click to enlarge</p>
+          <h4 data-en="Image 6" data-te="చిత్రం 6" data-ta="படம் 6" data-kn="ಚಿತ್ರ 6">Image 6</h4>
+          <p data-en="Click to enlarge" data-te="పెద్దదిగా చూడడానికి క్లిక్ చేయండి" data-ta="பெரிதாக்க கிளிக் செய்க" data-kn="ದೊಡ್ಡದಾಗಿಸಲು ಕ್ಲಿಕ್ ಮಾಡಿ">Click to enlarge</p>
         </div>
       </div>
       <div class="gallery-item" onclick="openLightbox('images/gallery (7).jpeg', this)">
         <img src="images/gallery (7).jpeg" alt="Devasthanam Gallery 7" loading="lazy" />
         <div class="gallery-overlay">
-          <h4 data-en="Image 7" data-te="చిత్రం 7">Image 7</h4>
-          <p data-en="Click to enlarge" data-te="పెద్దదిగా చూడడానికి క్లిక్ చేయండి">Click to enlarge</p>
+          <h4 data-en="Image 7" data-te="చిత్రం 7" data-ta="படம் 7" data-kn="ಚಿತ್ರ 7">Image 7</h4>
+          <p data-en="Click to enlarge" data-te="పెద్దదిగా చూడడానికి క్లిక్ చేయండి" data-ta="பெரிதாக்க கிளிக் செய்க" data-kn="ದೊಡ್ಡದಾಗಿಸಲು ಕ್ಲಿಕ್ ಮಾಡಿ">Click to enlarge</p>
         </div>
       </div>
       <div class="gallery-item" onclick="openLightbox('images/gallery (8).jpeg', this)">
         <img src="images/gallery (8).jpeg" alt="Devasthanam Gallery 8" loading="lazy" />
         <div class="gallery-overlay">
-          <h4 data-en="Image 8" data-te="చిత్రం 8">Image 8</h4>
-          <p data-en="Click to enlarge" data-te="పెద్దదిగా చూడడానికి క్లిక్ చేయండి">Click to enlarge</p>
+          <h4 data-en="Image 8" data-te="చిత్రం 8" data-ta="படம் 8" data-kn="ಚಿತ್ರ 8">Image 8</h4>
+          <p data-en="Click to enlarge" data-te="పెద్దదిగా చూడడానికి క్లిక్ చేయండి" data-ta="பெரிதாக்க கிளிக் செய்க" data-kn="ದೊಡ್ಡದಾಗಿಸಲು ಕ್ಲಿಕ್ ಮಾಡಿ">Click to enlarge</p>
         </div>
       </div>
       <div class="gallery-item" onclick="openLightbox('images/gallery (9).jpeg', this)">
         <img src="images/gallery (9).jpeg" alt="Devasthanam Gallery 9" loading="lazy" />
         <div class="gallery-overlay">
-          <h4 data-en="Image 9" data-te="చిత్రం 9">Image 9</h4>
-          <p data-en="Click to enlarge" data-te="పెద్దదిగా చూడడానికి క్లిక్ చేయండి">Click to enlarge</p>
+          <h4 data-en="Image 9" data-te="చిత్రం 9" data-ta="படம் 9" data-kn="ಚಿತ್ರ 9">Image 9</h4>
+          <p data-en="Click to enlarge" data-te="పెద్దదిగా చూడడానికి క్లిక్ చేయండి" data-ta="பெரிதாக்க கிளிக் செய்க" data-kn="ದೊಡ್ಡದಾಗಿಸಲು ಕ್ಲಿಕ್ ಮಾಡಿ">Click to enlarge</p>
         </div>
       </div>
       <div class="gallery-item" onclick="openLightbox('images/gallery (10).jpeg', this)">
         <img src="images/gallery (10).jpeg" alt="Devasthanam Gallery 10" loading="lazy" />
         <div class="gallery-overlay">
-          <h4 data-en="Image 10" data-te="చిత్రం 10">Image 10</h4>
-          <p data-en="Click to enlarge" data-te="పెద్దదిగా చూడడానికి క్లిక్ చేయండి">Click to enlarge</p>
+          <h4 data-en="Image 10" data-te="చిత్రం 10" data-ta="படம் 10" data-kn="ಚಿತ್ರ 10">Image 10</h4>
+          <p data-en="Click to enlarge" data-te="పెద్దదిగా చూడడానికి క్లిక్ చేయండి" data-ta="பெரிதாக்க கிளிக் செய்க" data-kn="ದೊಡ್ಡದಾಗಿಸಲು ಕ್ಲಿಕ್ ಮಾಡಿ">Click to enlarge</p>
         </div>
       </div>
       <div class="gallery-item" onclick="openLightbox('images/gallery (11).jpeg', this)">
         <img src="images/gallery (11).jpeg" alt="Devasthanam Gallery 11" loading="lazy" />
         <div class="gallery-overlay">
-          <h4 data-en="Image 11" data-te="చిత్రం 11">Image 11</h4>
-          <p data-en="Click to enlarge" data-te="పెద్దదిగా చూడడానికి క్లిక్ చేయండి">Click to enlarge</p>
+          <h4 data-en="Image 11" data-te="చిత్రం 11" data-ta="படம் 11" data-kn="ಚಿತ್ರ 11">Image 11</h4>
+          <p data-en="Click to enlarge" data-te="పెద్దదిగా చూడడానికి క్లిక్ చేయండి" data-ta="பெரிதாக்க கிளிக் செய்க" data-kn="ದೊಡ್ಡದಾಗಿಸಲು ಕ್ಲಿಕ್ ಮಾಡಿ">Click to enlarge</p>
         </div>
       </div>
       <div class="gallery-item" onclick="openLightbox('images/gallery (12).jpeg', this)">
         <img src="images/gallery (12).jpeg" alt="Devasthanam Gallery 12" loading="lazy" />
         <div class="gallery-overlay">
-          <h4 data-en="Image 12" data-te="చిత్రం 12">Image 12</h4>
-          <p data-en="Click to enlarge" data-te="పెద్దదిగా చూడడానికి క్లిక్ చేయండి">Click to enlarge</p>
+          <h4 data-en="Image 12" data-te="చిత్రం 12" data-ta="படம் 12" data-kn="ಚಿತ್ರ 12">Image 12</h4>
+          <p data-en="Click to enlarge" data-te="పెద్దదిగా చూడడానికి క్లిక్ చేయండి" data-ta="பெரிதாக்க கிளிக் செய்க" data-kn="ದೊಡ್ಡದಾಗಿಸಲು ಕ್ಲಿಕ್ ಮಾಡಿ">Click to enlarge</p>
         </div>
       </div>
       <div class="gallery-item" onclick="openLightbox('images/gallery (13).jpeg', this)">
         <img src="images/gallery (13).jpeg" alt="Devasthanam Gallery 13" loading="lazy" />
         <div class="gallery-overlay">
-          <h4 data-en="Image 13" data-te="చిత్రం 13">Image 13</h4>
-          <p data-en="Click to enlarge" data-te="పెద్దదిగా చూడడానికి క్లిక్ చేయండి">Click to enlarge</p>
+          <h4 data-en="Image 13" data-te="చిత్రం 13" data-ta="படம் 13" data-kn="ಚಿತ್ರ 13">Image 13</h4>
+          <p data-en="Click to enlarge" data-te="పెద్దదిగా చూడడానికి క్లిక్ చేయండి" data-ta="பெரிதாக்க கிளிக் செய்க" data-kn="ದೊಡ್ಡದಾಗಿಸಲು ಕ್ಲಿಕ್ ಮಾಡಿ">Click to enlarge</p>
         </div>
       </div>
     </div>

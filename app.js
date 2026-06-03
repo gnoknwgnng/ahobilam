@@ -28,7 +28,15 @@ document.querySelectorAll('.nav-links a').forEach(a => {
 // ---- LANGUAGE SWITCHER ----
 function changeLang(lang) {
   document.querySelectorAll('[data-en]').forEach(el => {
-    el.textContent = lang === 'te' ? el.dataset.te : el.dataset.en;
+    if (lang === 'te') {
+      el.textContent = el.dataset.te || el.dataset.en;
+    } else if (lang === 'ta') {
+      el.textContent = el.dataset.ta || el.dataset.en;
+    } else if (lang === 'kn') {
+      el.textContent = el.dataset.kn || el.dataset.en;
+    } else {
+      el.textContent = el.dataset.en;
+    }
   });
 }
 
@@ -322,7 +330,7 @@ window.addEventListener('scroll', () => {
     const href = a.getAttribute('href');
     if (href === '#' + current) {
       a.style.color = 'var(--gold-light)';
-    } else if (href === '#hero' && ['about', 'temples', 'sevas', 'timings', 'visit', 'guides', 'trekking', 'heritage', 'volunteer', 'live-darshan'].includes(current)) {
+    } else if (href === '#hero' && ['about', 'sevas', 'timings', 'visit', 'guides', 'trekking', 'heritage', 'volunteer', 'live-darshan'].includes(current)) {
       a.style.color = 'var(--gold-light)';
     } else {
       a.style.color = '';
