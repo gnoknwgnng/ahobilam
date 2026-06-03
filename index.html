@@ -12,6 +12,37 @@
 </head>
 <body>
 
+<!-- PRELOADER -->
+<div id="preloader">
+  <div class="preloader-content">
+    <div class="preloader-visual">
+      <div class="preloader-emblem">ॐ</div>
+      <div class="preloader-chakra-wrap">
+        <svg class="preloader-svg-chakra" viewBox="0 0 200 200">
+          <circle cx="100" cy="100" r="80" stroke="var(--gold)" stroke-width="2" fill="none" stroke-dasharray="6,4" />
+          <circle cx="100" cy="100" r="70" stroke="var(--gold-dark)" stroke-width="1" fill="none" />
+          <line x1="100" y1="25" x2="100" y2="175" stroke="var(--gold)" stroke-width="1.5" opacity="0.4" />
+          <line x1="25" y1="100" x2="175" y2="100" stroke="var(--gold)" stroke-width="1.5" opacity="0.4" />
+          <line x1="47" y1="47" x2="153" y2="153" stroke="var(--gold)" stroke-width="1" opacity="0.3" />
+          <line x1="47" y1="153" x2="153" y2="47" stroke="var(--gold)" stroke-width="1" opacity="0.3" />
+          <g stroke="var(--gold)" fill="var(--gold)" opacity="0.7">
+            <polygon points="100,10 96,25 104,25" />
+            <polygon points="100,190 96,175 104,175" />
+            <polygon points="10,100 25,96 25,104" />
+            <polygon points="190,100 175,96 175,104" />
+            <polygon points="37,37 47,45 45,47" />
+            <polygon points="163,163 153,155 155,153" />
+            <polygon points="37,163 47,155 45,153" />
+            <polygon points="163,37 153,45 155,47" />
+          </g>
+        </svg>
+      </div>
+    </div>
+    <h2 class="preloader-title" data-en="Ahobilam Devasthanam" data-te="అహోబిలం దేవస్థానం">Ahobilam Devasthanam</h2>
+    <p class="preloader-mantra" data-en="|| Om Namo Bhagavate Vasudevaya ||" data-te="|| ఓం నమో భగవతే వాసుదేవాయ ||">|| Om Namo Bhagavate Vasudevaya ||</p>
+  </div>
+</div>
+
 <!-- TOP BAR -->
 <div class="topbar">
   <div class="topbar-inner">
@@ -39,14 +70,19 @@
     <nav id="main-nav">
       <button class="hamburger" onclick="toggleMenu()" aria-label="Menu">☰</button>
       <ul class="nav-links" id="nav-links">
-        <li><a href="#about">About</a></li>
-        <li><a href="#temples">Temples</a></li>
-        <li><a href="#sevas">Sevas &amp; Donations</a></li>
-        <li><a href="#visit">Plan Visit</a></li>
-        <li><a href="#trekking">Trekking</a></li>
-        <li><a href="#annadanam">Annadanam</a></li>
-        <li><a href="#heritage">Heritage</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li class="nav-item dropdown">
+          <a href="#hero" class="dropdown-toggle" data-en="Home ▾" data-te="హోమ్ ▾">Home ▾</a>
+          <ul class="dropdown-menu">
+            <li><a href="#sevas" onclick="showSevaTab('sevas-list')" data-en="Sevas" data-te="సేవలు">Sevas</a></li>
+            <li><a href="#timings" data-en="Darshans" data-te="దర్శనాలు">Darshans</a></li>
+            <li><a href="#sevas" onclick="showSevaTab('donations-list')" data-en="E-Hundi" data-te="ఇ-హుండీ">E-Hundi</a></li>
+            <li><a href="#visit" onclick="showVisitTab('accommodation-info')" data-en="Accommodation" data-te="వసతి సౌకర్యాలు">Accommodation</a></li>
+            <li><a href="#guides" data-en="Guide" data-te="గైడ్ సేవలు">Guide</a></li>
+            <li><a href="#news-events" data-en="Updates" data-te="అప్‌డేట్స్">Updates</a></li>
+          </ul>
+        </li>
+        <li><a href="#news-events" data-en="News &amp; Events" data-te="తాజా సమాచారం &amp; ఈవెంట్స్">News &amp; Events</a></li>
+        <li><a href="#gallery" data-en="Gallery" data-te="గ్యాలరీ">Gallery</a></li>
       </ul>
     </nav>
   </div>
@@ -487,10 +523,11 @@
       <div class="divider-ornament">⸻ ✦ ⸻</div>
     </div>
     <div class="visit-tabs">
-      <button class="vtab active" onclick="showVisitTab('how-to-reach')">How to Reach</button>
-      <button class="vtab" onclick="showVisitTab('best-time')">Best Time to Visit</button>
-      <button class="vtab" onclick="showVisitTab('distances')">Distances</button>
-      <button class="vtab" onclick="showVisitTab('transport-local')">Local Transport</button>
+      <button class="vtab active" onclick="showVisitTab('how-to-reach')" data-en="How to Reach" data-te="చేరుకోవడం ఎలా">How to Reach</button>
+      <button class="vtab" onclick="showVisitTab('best-time')" data-en="Best Time to Visit" data-te="సందర్శనకు ఉత్తమ సమయం">Best Time to Visit</button>
+      <button class="vtab" onclick="showVisitTab('distances')" data-en="Distances" data-te="దూరాలు">Distances</button>
+      <button class="vtab" onclick="showVisitTab('transport-local')" data-en="Local Transport" data-te="స్థానిక రవాణా">Local Transport</button>
+      <button class="vtab" onclick="showVisitTab('accommodation-info')" data-en="Accommodation" data-te="వసతి సౌకర్యాలు">Accommodation</button>
     </div>
 
     <div id="how-to-reach" class="visit-tab active">
@@ -598,6 +635,44 @@
           <div class="t-icon">🗺</div>
           <h4>Temple Shuttle</h4>
           <p>Shuttle service available between Lower and Upper Ahobilam during peak festival periods. Check at guest house for current schedule.</p>
+        </div>
+      </div>
+    </div>
+
+    <div id="accommodation-info" class="visit-tab">
+      <div class="accommodation-grid">
+        <div class="accommodation-card">
+          <h4 data-en="Malola Guest House" data-te="మాలోల గెస్ట్ హౌస్">Malola Guest House</h4>
+          <span class="price-range" data-en="₹ 500 – ₹ 1,500 / night" data-te="₹ 500 – ₹ 1,500 / రాత్రి">₹ 500 – ₹ 1,500 / night</span>
+          <ul>
+            <li><strong data-en="Rooms:" data-te="గదులు:">Rooms:</strong> <span data-en="AC & Non-AC rooms available" data-te="ఏసీ & నాన్ ఏసీ గదులు కలవు">AC & Non-AC rooms available</span></li>
+            <li><strong data-en="Location:" data-te="ప్రదేశం:">Location:</strong> <span data-en="Near Lower Ahobilam Temple" data-te="దిగువ అహోబిలం ఆలయ సమీపంలో">Near Lower Ahobilam Temple</span></li>
+            <li><strong data-en="Management:" data-te="నిర్వహణ:">Management:</strong> <span data-en="Official Devasthanam Board" data-te="అధికారిక దేవస్థానం బోర్డు">Official Devasthanam Board</span></li>
+            <li><strong data-en="Phone:" data-te="ఫోన్:">Phone:</strong> <span>08519-252045</span></li>
+          </ul>
+          <a href="#contact" class="btn-book" data-en="Book Now" data-te="ఇప్పుడే బుక్ చేయండి">Book Now</a>
+        </div>
+        <div class="accommodation-card">
+          <h4 data-en="Haritha Hotel (APTDC)" data-te="హరిత హోటల్ (APTDC)">Haritha Hotel (APTDC)</h4>
+          <span class="price-range" data-en="₹ 1,200 – ₹ 2,500 / night" data-te="₹ 1,200 – ₹ 2,500 / రాత్రి">₹ 1,200 – ₹ 2,500 / night</span>
+          <ul>
+            <li><strong data-en="Rooms:" data-te="గదులు:">Rooms:</strong> <span data-en="Deluxe AC, Non-AC & Suite rooms" data-te="డీలక్స్ ఏసీ, నాన్-ఏసీ & సూట్లు">Deluxe AC, Non-AC & Suite rooms</span></li>
+            <li><strong data-en="Facilities:" data-te="సదుపాయాలు:">Facilities:</strong> <span data-en="In-house restaurant & parking" data-te="రెస్టారెంట్ & పార్కింగ్ కలవు">In-house restaurant & parking</span></li>
+            <li><strong data-en="Location:" data-te="ప్రదేశం:">Location:</strong> <span data-en="1 km from Lower Ahobilam" data-te="దిగువ అహోబిలానికి 1 కి.మీ">1 km from Lower Ahobilam</span></li>
+            <li><strong data-en="Booking:" data-te="బుకింగ్:">Booking:</strong> <span data-en="Online via tourism portal" data-te="ఆన్‌లైన్ ద్వారా">Online via tourism portal</span></li>
+          </ul>
+          <a href="https://tourism.ap.gov.in" target="_blank" class="btn-book" data-en="Book Online" data-te="ఆన్‌లైన్ బుకింగ్">Book Online</a>
+        </div>
+        <div class="accommodation-card">
+          <h4 data-en="Sri Ahobila Mutt Guest House" data-te="శ్రీ అహోబిల మఠం గెస్ట్ హౌస్">Sri Ahobila Mutt Guest House</h4>
+          <span class="price-range" data-en="Donation-based / Nominal" data-te="విరాళం ఆధారిత / నామమాత్రపు">Donation-based / Nominal</span>
+          <ul>
+            <li><strong data-en="Rooms:" data-te="గదులు:">Rooms:</strong> <span data-en="Traditional pilgrim rooms" data-te="సాంప్రదాయ గదులు">Traditional pilgrim rooms</span></li>
+            <li><strong data-en="Location:" data-te="ప్రదేశం:">Location:</strong> <span data-en="Very close to Lower Temple" data-te="దిగువ ఆలయానికి చాలా దగ్గరగా">Very close to Lower Temple</span></li>
+            <li><strong data-en="Ideal for:" data-te="అనువైనవి:">Ideal for:</strong> <span data-en="Mutt devotees & spiritual groups" data-te="మఠ భక్తులు & ఆధ్యాత్మిక బృందాలు">Mutt devotees & spiritual groups</span></li>
+            <li><strong data-en="Phone:" data-te="ఫోన్:">Phone:</strong> <span>08519-252024</span></li>
+          </ul>
+          <a href="#contact" class="btn-book" data-en="Enquire" data-te="విచారించండి">Enquire</a>
         </div>
       </div>
     </div>
@@ -787,41 +862,159 @@
       </div>
     </div>
 
-    <!-- Festival Calendar -->
-    <div class="festival-calendar">
-      <h3>Festival Calendar 2025–26</h3>
-      <div class="festival-list">
-        <div class="festival-item upcoming">
-          <div class="f-date"><span class="f-month">FEB</span><span class="f-day">2026</span></div>
-          <div class="f-info">
-            <h5>Brahmothsavam</h5>
-            <p>10-day grand festival. Lord Prahlada Varadan processions. Thousands attend. Book accommodation early.</p>
-          </div>
-          <span class="f-badge">Grand Festival</span>
+  </div>
+</section>
+
+<!-- NEWS & EVENTS SECTION -->
+<section id="news-events" class="section section-light">
+  <div class="container">
+    <div class="section-header">
+      <span class="section-tag" data-en="Latest News" data-te="తాజా విశేషాలు">Latest News</span>
+      <h2 class="section-title" data-en="News &amp; Events" data-te="వార్తలు &amp; ఈవెంట్స్">News &amp; Events</h2>
+      <div class="divider-ornament">⸻ ✦ ⸻</div>
+      <p class="section-desc" data-en="Stay updated with the latest happenings, festivals, and notifications from the Devasthanam" data-te="దేవస్థానం నుండి తాజా సమాచారం, ఉత్సవాలు మరియు నోటిఫికేషన్లతో అప్‌డేట్‌గా ఉండండి">Stay updated with the latest happenings, festivals, and notifications from the Devasthanam</p>
+    </div>
+    
+    <div class="news-events-grid">
+      <!-- Latest Announcements -->
+      <div class="news-feed">
+        <h3 data-en="Announcements &amp; Updates" data-te="ప్రకటనలు &amp; అప్‌డేట్స్">Announcements &amp; Updates</h3>
+        
+        <div class="news-card">
+          <div class="news-date">June 2, 2026</div>
+          <h4 data-en="Swathi Nakshatra Thirumanjanam Scheduled" data-te="స్వాతి నక్షత్ర తిరుమంజన కార్యక్రమం సిద్ధం">Swathi Nakshatra Thirumanjanam Scheduled</h4>
+          <p data-en="The monthly Swathi Nakshatra Thirumanjanam for all nine Narasimha shrines will be performed on June 15. Devotees can book their Sankalpam online or at the counter." data-te="అన్ని నవ నరసింహ ఆలయాలలో ఈ నెల జూన్ 15న మాస స్వాతి నక్షత్ర అభిషేకం మరియు తిరుమంజనం జరగనుంది. భక్తులు ఆన్‌లైన్ లేదా కౌంటర్ ద్వారా సంకల్పం బుక్ చేసుకోవచ్చు.">The monthly Swathi Nakshatra Thirumanjanam for all nine Narasimha shrines will be performed on June 15. Devotees can book their Sankalpam online or at the counter.</p>
         </div>
-        <div class="festival-item">
-          <div class="f-date"><span class="f-month">Monthly</span><span class="f-day">Swathi</span></div>
-          <div class="f-info">
-            <h5>Swathi Nakshatra – Thirumanjanam</h5>
-            <p>Monthly ritual bathing for all nine shrine deities. Special darshan and sevas.</p>
-          </div>
-          <span class="f-badge">Monthly</span>
+
+        <div class="news-card">
+          <div class="news-date">May 28, 2026</div>
+          <h4 data-en="New Trekking Guidelines Issued" data-te="కొత్త ట్రెక్కింగ్ మార్గదర్శకాలు జారీ">New Trekking Guidelines Issued</h4>
+          <p data-en="In view of early summer rains, pilgrims trekking to Jwala Narasimha and Ugra Stambham are advised to start before 9:00 AM and travel in groups with registered forest guides." data-te="అకాల వేసవి వర్షాల కారణంగా, జ్వాలా నరసింహ మరియు ఉగ్రస్తంభం వెళ్లే భక్తులు ఉదయం 9:00 గంటలలోపు ప్రయాణం ప్రారంభించాలని మరియు రిజిస్టర్డ్ గైడ్‌లతో మాత్రమే వెళ్ళాలని కోరడమైనది.">In view of early summer rains, pilgrims trekking to Jwala Narasimha and Ugra Stambham are advised to start before 9:00 AM and travel in groups with registered forest guides.</p>
         </div>
-        <div class="festival-item">
-          <div class="f-date"><span class="f-month">JAN</span><span class="f-day">Vaikunta</span></div>
-          <div class="f-info">
-            <h5>Vaikunta Ekadashi</h5>
-            <p>Most sacred Ekadashi — Vaikunta Dwara Darshan. Extended temple hours and special sevas.</p>
-          </div>
-          <span class="f-badge">Major Festival</span>
+
+        <div class="news-card">
+          <div class="news-date">May 15, 2026</div>
+          <h4 data-en="Free Annadanam Hall Timings Extended" data-te="ఉచిత అన్నదాన సత్రం సమయాల పెంపు">Free Annadanam Hall Timings Extended</h4>
+          <p data-en="To accommodate the summer rush, the Nitya Annadanam Prasadam Hall will now remain open from 11:30 AM to 3:30 PM daily, serving traditional prasadam meals to all pilgrims." data-te="వేసవి సెలవుల రద్దీ దృష్ట్యా నిత్య అన్నదాన ప్రసాద వితరణ సమయాన్ని ఉదయం 11:30 నుండి మధ్యాహ్నం 3:30 వరకు పొడిగించడమైనది. భక్తులందరూ దీనిని గమనించగలరు.">To accommodate the summer rush, the Nitya Annadanam Prasadam Hall will now remain open from 11:30 AM to 3:30 PM daily, serving traditional prasadam meals to all pilgrims.</p>
         </div>
-        <div class="festival-item">
-          <div class="f-date"><span class="f-month">APR</span><span class="f-day">Ugadi</span></div>
-          <div class="f-info">
-            <h5>Ugadi – Telugu New Year</h5>
-            <p>New year celebrations with special poojas and Panchanga Sravanam (new year almanac reading).</p>
+      </div>
+
+      <!-- Festival Calendar (Moved from Heritage) -->
+      <div class="festival-calendar-wrapper">
+        <h3 data-en="Upcoming Festivals" data-te="రాబోయే పండుగలు">Upcoming Festivals</h3>
+        <div class="festival-calendar" style="margin-top:0;">
+          <div class="festival-list">
+            <div class="festival-item upcoming">
+              <div class="f-date"><span class="f-month">FEB</span><span class="f-day">2026</span></div>
+              <div class="f-info">
+                <h5 data-en="Brahmothsavam" data-te="బ్రహ్మోత్సవాలు">Brahmothsavam</h5>
+                <p data-en="10-day grand festival. Lord Prahlada Varadan processions. Thousands attend. Book accommodation early." data-te="10 రోజుల మహా ఉత్సవం. శ్రీ ప్రహ్లాద వరద నరసింహ స్వామి రథోత్సవాలు. భక్తులు వసతిని ముందుగానే బుక్ చేసుకోగలరు.">10-day grand festival. Lord Prahlada Varadan processions. Thousands attend. Book accommodation early.</p>
+              </div>
+              <span class="f-badge" data-en="Grand Festival" data-te="మహా ఉత్సవం">Grand Festival</span>
+            </div>
+            <div class="festival-item">
+              <div class="f-date"><span class="f-month">Monthly</span><span class="f-day">Swathi</span></div>
+              <div class="f-info">
+                <h5 data-en="Swathi Nakshatra – Thirumanjanam" data-te="స్వాతి నక్షత్రం - తిరుమంజనం">Swathi Nakshatra – Thirumanjanam</h5>
+                <p data-en="Monthly ritual bathing for all nine shrine deities. Special darshan and sevas." data-te="అన్ని తొమ్మిది ఆలయాల దేవతలకు ప్రతి నెలా జరిగే పవిత్ర అభిషేక మహోత్సవం. ప్రత్యేక దర్శనాలు.">Monthly ritual bathing for all nine shrine deities. Special darshan and sevas.</p>
+              </div>
+              <span class="f-badge" data-en="Monthly" data-te="ప్రతి నెల">Monthly</span>
+            </div>
+            <div class="festival-item">
+              <div class="f-date"><span class="f-month">JAN</span><span class="f-day">Vaikunta</span></div>
+              <div class="f-info">
+                <h5 data-en="Vaikunta Ekadashi" data-te="వైకుంఠ ఏకాదశి">Vaikunta Ekadashi</h5>
+                <p data-en="Most sacred Ekadashi — Vaikunta Dwara Darshan. Extended temple hours and special sevas." data-te="అత్యంత పవిత్రమైన ఉత్తర ద్వార దర్శనం. దేవాలయ వేళల పెంపు మరియు ప్రత్యేక పూజలు.">Most sacred Ekadashi — Vaikunta Dwara Darshan. Extended temple hours and special sevas.</p>
+              </div>
+              <span class="f-badge" data-en="Major Festival" data-te="ముఖ్య పండుగ">Major Festival</span>
+            </div>
+            <div class="festival-item">
+              <div class="f-date"><span class="f-month">APR</span><span class="f-day">Ugadi</span></div>
+              <div class="f-info">
+                <h5 data-en="Ugadi – Telugu New Year" data-te="ఉగాది – తెలుగు నూతన సంవత్సరం">Ugadi – Telugu New Year</h5>
+                <p data-en="New year celebrations with special poojas and Panchanga Sravanam." data-te="ప్రత్యేక పూజలతో కొత్త సంవత్సర వేడుకలు మరియు పంచాంగ శ్రవణం.">New year celebrations with special poojas and Panchanga Sravanam.</p>
+              </div>
+              <span class="f-badge" data-en="Festival" data-te="పండుగ">Festival</span>
+            </div>
           </div>
-          <span class="f-badge">Festival</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- DEVASHTANAM GALLERY SECTION -->
+<section id="gallery" class="section section-dark-bg">
+  <div class="container">
+    <div class="section-header light">
+      <span class="section-tag" data-en="Darshan Gallery" data-te="చిత్రమాలిక">Darshan Gallery</span>
+      <h2 class="section-title" data-en="Devasthanam Gallery" data-te="దేవస్థానం గ్యాలరీ">Devasthanam Gallery</h2>
+      <div class="divider-ornament">⸻ ✦ ⸻</div>
+      <p class="section-desc" data-en="Glimpses of the sacred shrines and divine deity forms of Nava Narasimha Kshetram" data-te="నవ నరసింహ క్షేత్రంలోని పవిత్ర ఆలయాలు మరియు దివ్య రూపాల చిత్రమాలిక">Glimpses of the sacred shrines and divine deity forms of Nava Narasimha Kshetram</p>
+    </div>
+    
+    <div class="gallery-grid">
+      <div class="gallery-item" onclick="openTemple(0)">
+        <img src="images/jwala.jpg" alt="Jwala Narasimha" loading="lazy" />
+        <div class="gallery-overlay">
+          <h4 data-en="Jwala Narasimha" data-te="జ్వాలా నరసింహ">Jwala Narasimha</h4>
+          <p data-en="Upper Ahobilam" data-te="ఎగువ అహోబిలం">Upper Ahobilam</p>
+        </div>
+      </div>
+      <div class="gallery-item" onclick="openTemple(1)">
+        <img src="images/ahobila.jpg" alt="Ahobila Narasimha" loading="lazy" />
+        <div class="gallery-overlay">
+          <h4 data-en="Ahobila Narasimha" data-te="అహోబిల నరసింహ">Ahobila Narasimha</h4>
+          <p data-en="Main Shrine (Upper)" data-te="ప్రధాన ఆలయం (ఎగువ)">Main Shrine (Upper)</p>
+        </div>
+      </div>
+      <div class="gallery-item" onclick="openTemple(2)">
+        <img src="images/kroda.jpg" alt="Kroda Narasimha" loading="lazy" />
+        <div class="gallery-overlay">
+          <h4 data-en="Kroda Narasimha" data-te="క్రోడ నరసింహ">Kroda Narasimha</h4>
+          <p data-en="Varaha-Narasimha Form" data-te="వరాహ-నరసింహ రూపం">Varaha-Narasimha Form</p>
+        </div>
+      </div>
+      <div class="gallery-item" onclick="openTemple(3)">
+        <img src="images/malola.jpg" alt="Malola Narasimha" loading="lazy" />
+        <div class="gallery-overlay">
+          <h4 data-en="Malola Narasimha" data-te="మాలోల నరసింహ">Malola Narasimha</h4>
+          <p data-en="Lakshmi-Narasimha Form" data-te="లక్ష్మీ-నరసింహ రూపం">Lakshmi-Narasimha Form</p>
+        </div>
+      </div>
+      <div class="gallery-item" onclick="openTemple(4)">
+        <img src="images/kaaranja.jpg" alt="Kaaranja Narasimha" loading="lazy" />
+        <div class="gallery-overlay">
+          <h4 data-en="Kaaranja Narasimha" data-te="కారంజ నరసింహ">Kaaranja Narasimha</h4>
+          <p data-en="Beneath Karanja Tree" data-te="కారంజ వృక్షం క్రింద">Beneath Karanja Tree</p>
+        </div>
+      </div>
+      <div class="gallery-item" onclick="openTemple(5)">
+        <img src="images/bhargava.jpg" alt="Bhargava Narasimha" loading="lazy" />
+        <div class="gallery-overlay">
+          <h4 data-en="Bhargava Narasimha" data-te="భార్గవ నరసింహ">Bhargava Narasimha</h4>
+          <p data-en="Worshipped by Parashurama" data-te="పరశురాముని పూజిత రూపం">Worshipped by Parashurama</p>
+        </div>
+      </div>
+      <div class="gallery-item" onclick="openTemple(6)">
+        <img src="images/yogananda.jpg" alt="Yogananda Narasimha" loading="lazy" />
+        <div class="gallery-overlay">
+          <h4 data-en="Yogananda Narasimha" data-te="యోగానంద నరసింహ">Yogananda Narasimha</h4>
+          <p data-en="Meditative Posture" data-te="ధ్యాన ముద్ర రూపం">Meditative Posture</p>
+        </div>
+      </div>
+      <div class="gallery-item" onclick="openTemple(7)">
+        <img src="images/kshatravata.jpg" alt="Kshatravata Narasimha" loading="lazy" />
+        <div class="gallery-overlay">
+          <h4 data-en="Kshatravata Narasimha" data-te="ఛత్రవట నరసింహ">Kshatravata Narasimha</h4>
+          <p data-en="Beneath Banyan Tree" data-te="మర్రి వృక్షం క్రింద">Beneath Banyan Tree</p>
+        </div>
+      </div>
+      <div class="gallery-item" onclick="openTemple(8)">
+        <img src="images/pavana.jpg" alt="Pavana Narasimha" loading="lazy" />
+        <div class="gallery-overlay">
+          <h4 data-en="Pavana Narasimha" data-te="పావన నరసింహ">Pavana Narasimha</h4>
+          <p data-en="Ultimate Purifier Form" data-te="పావన పవిత్ర రూపం">Ultimate Purifier Form</p>
         </div>
       </div>
     </div>

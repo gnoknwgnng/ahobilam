@@ -249,12 +249,18 @@ document.addEventListener('keydown', e => {
   if (e.key === 'Escape') closeModal();
 });
 
+
 // ---- SEVA TABS ----
 function showSevaTab(id) {
   document.querySelectorAll('.seva-tab-content').forEach(el => el.classList.remove('active'));
   document.querySelectorAll('.stab').forEach(b => b.classList.remove('active'));
   document.getElementById(id).classList.add('active');
-  event.target.classList.add('active');
+  
+  // Activate correct button in the tab group
+  const tabButton = Array.from(document.querySelectorAll('.stab')).find(btn => btn.getAttribute('onclick').includes(id));
+  if (tabButton) {
+    tabButton.classList.add('active');
+  }
 }
 
 // ---- VISIT TABS ----
@@ -262,7 +268,12 @@ function showVisitTab(id) {
   document.querySelectorAll('.visit-tab').forEach(el => el.classList.remove('active'));
   document.querySelectorAll('.vtab').forEach(b => b.classList.remove('active'));
   document.getElementById(id).classList.add('active');
-  event.target.classList.add('active');
+  
+  // Activate correct button in the tab group
+  const tabButton = Array.from(document.querySelectorAll('.vtab')).find(btn => btn.getAttribute('onclick').includes(id));
+  if (tabButton) {
+    tabButton.classList.add('active');
+  }
 }
 
 // ---- CONTACT FORM ----
@@ -291,7 +302,7 @@ const revealObserver = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.1 });
 
-document.querySelectorAll('.temple-card, .seva-card, .guide-card, .reach-card, .trek-card, .heritage-card, .vol-card, .timings-card').forEach(el => {
+document.querySelectorAll('.temple-card, .seva-card, .guide-card, .reach-card, .trek-card, .heritage-card, .vol-card, .timings-card, .gallery-item, .news-card, .accommodation-card').forEach(el => {
   el.style.opacity = '0';
   el.style.transform = 'translateY(20px)';
   el.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
@@ -303,10 +314,37 @@ const sections = document.querySelectorAll('section[id]');
 window.addEventListener('scroll', () => {
   let current = '';
   sections.forEach(s => {
-    if (window.scrollY >= s.offsetTop - 120) current = s.getAttribute('id');
+    if (window.scrollY >= s.offsetTop - 150) current = s.getAttribute('id');
   });
-  document.querySelectorAll('.nav-links a').forEach(a => {
-    a.style.color = a.getAttribute('href') === '#' + current ? 'var(--gold-light)' : '';
+  
+  // Highlight main nav links
+  document.querySelectorAll('.nav-links > li > a').forEach(a => {
+    const href = a.getAttribute('href');
+    if (href === '#' + current) {
+      a.style.color = 'var(--gold-light)';
+    } else if (href === '#hero' && ['about', 'temples', 'sevas', 'timings', 'visit', 'guides', 'trekking', 'heritage', 'volunteer', 'live-darshan'].includes(current)) {
+      a.style.color = 'var(--gold-light)';
+    } else {
+      a.style.color = '';
+    }
+  });
+
+  // Highlight dropdown items
+  document.querySelectorAll('.dropdown-menu a').forEach(a => {
+    const href = a.getAttribute('href');
+    if (href === '#sevas' && current === 'sevas') {
+      a.style.color = 'var(--gold-light)';
+    } else if (href === '#timings' && current === 'timings') {
+      a.style.color = 'var(--gold-light)';
+    } else if (href === '#visit' && current === 'visit') {
+      a.style.color = 'var(--gold-light)';
+    } else if (href === '#guides' && current === 'guides') {
+      a.style.color = 'var(--gold-light)';
+    } else if (href === '#news-events' && current === 'news-events') {
+      a.style.color = 'var(--gold-light)';
+    } else {
+      a.style.color = '';
+    }
   });
 });
 
@@ -314,3 +352,34 @@ window.addEventListener('scroll', () => {
 const style = document.createElement('style');
 style.textContent = '@keyframes fadeIn { from { opacity:0; transform:scale(0.97); } to { opacity:1; transform:scale(1); } }';
 document.head.appendChild(style);
+
+// ---- DESKTOP/TABLET DROPDOWN TOGGLE ----
+const dropdownToggle = document.querySelector('.dropdown-toggle');
+const dropdownMenu = document.querySelector('.dropdown-menu');
+
+if (dropdownToggle && dropdownMenu) {
+  dropdownToggle.addEventListener('click', (e) => {
+    if (window.innerWidth > 768) {
+      e.preventDefault();
+      e.stopPropagation();
+      dropdownMenu.classList.toggle('show');
+    }
+  });
+
+  // Close dropdown when clicking outside
+  document.addEventListener('click', (e) => {
+    if (window.innerWidth > 768 && !dropdownToggle.contains(e.target) && !dropdownMenu.contains(e.target)) {
+      dropdownMenu.classList.remove('show');
+    }
+  });
+}
+
+// ---- PRELOADER HIDE ----
+window.addEventListener('load', () => {
+  const preloader = document.getElementById('preloader');
+  if (preloader) {
+    setTimeout(() => {
+      preloader.classList.add('fade-out');
+    }, 1500); // 1.5 second delay for smooth, premium devotional experience
+  }
+});
