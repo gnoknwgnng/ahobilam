@@ -2415,20 +2415,69 @@ h1, h2, h3, h4, h5 {
   bottom: 85px;
   right: 20px;
   z-index: 9999;
-  pointer-events: auto; /* Enable clicks! */
-  cursor: pointer;      /* Hand cursor */
-  width: 160px;
-  height: 160px;
-  background-color: transparent;
-  filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.5));
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  background: radial-gradient(circle, var(--maroon) 0%, var(--maroon-dark) 100%);
+  border: 3px double var(--gold);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6), inset 0 0 15px rgba(212, 175, 55, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
   animation: slideInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
+  overflow: visible; /* To allow tooltip and model to pop out slightly */
 }
 .floating-3d-model model-viewer {
-  pointer-events: none; /* Let clicks pass through to parent container */
+  pointer-events: none; /* Let clicks pass through to click-overlay */
 }
 .floating-3d-model:hover {
-  transform: scale(1.08); /* Micro-animation on hover */
+  transform: scale(1.1) rotate(3deg);
+  box-shadow: 0 15px 35px rgba(212, 175, 55, 0.4), inset 0 0 20px rgba(212, 175, 55, 0.5);
+}
+.model-click-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 10;
+  border-radius: 50%;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.001); /* Invisible but fully clickable */
+}
+.floating-badge-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  z-index: 0;
+}
+.badge-om {
+  font-size: 2.2rem;
+  color: var(--gold);
+  text-shadow: 0 0 10px rgba(212, 175, 55, 0.8);
+  font-family: 'Cinzel', serif;
+  font-weight: bold;
+  animation: pulse-glow 2s infinite ease-in-out;
+}
+@keyframes pulse-glow {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.8;
+    text-shadow: 0 0 8px rgba(212, 175, 55, 0.6);
+  }
+  50% {
+    transform: scale(1.08);
+    opacity: 1;
+    text-shadow: 0 0 18px rgba(212, 175, 55, 1);
+  }
 }
 .floating-3d-model::after {
   content: "Chat Guide 🙏";
