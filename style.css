@@ -2213,3 +2213,28 @@ h1, h2, h3, h4, h5 {
 }
 
 /* Force redeployment of the reverted preloader */
+
+/* ---- FLOATING 3D MODEL ---- */
+.floating-3d-model {
+  position: fixed;
+  bottom: 85px;
+  right: 20px;
+  z-index: 9999;
+  pointer-events: none; /* Mouse clicks pass through */
+  width: 160px;
+  height: 160px;
+  background-color: transparent;
+  filter: drop-shadow(0 10px 25px rgba(0, 0, 0, 0.5));
+  animation: slideInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+@keyframes slideInUp {
+  from {
+    transform: translateY(100px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
