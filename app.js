@@ -38,6 +38,19 @@ function changeLang(lang) {
       el.textContent = el.dataset.en;
     }
   });
+
+  // Also translate input placeholders
+  document.querySelectorAll('[data-en-placeholder]').forEach(el => {
+    if (lang === 'te') {
+      el.placeholder = el.dataset.tePlaceholder || el.dataset.enPlaceholder;
+    } else if (lang === 'ta') {
+      el.placeholder = el.dataset.taPlaceholder || el.dataset.enPlaceholder;
+    } else if (lang === 'kn') {
+      el.placeholder = el.dataset.knPlaceholder || el.dataset.enPlaceholder;
+    } else {
+      el.placeholder = el.dataset.enPlaceholder;
+    }
+  });
 }
 
 // ---- TEMPLE FILTER ----
@@ -416,5 +429,139 @@ function closeLightbox(event) {
     lightbox.classList.remove('open');
     document.body.style.overflow = ''; // Restore scroll
   }
+}
+
+// ---- CHAT WIDGET LOGIC ----
+function toggleChat() {
+  const widget = document.getElementById('chatWidget');
+  if (widget) {
+    widget.classList.toggle('open');
+    if (widget.classList.contains('open')) {
+      const chatInput = document.getElementById('chatInput');
+      if (chatInput) chatInput.focus();
+    }
+  }
+}
+
+// Bot responses configured for the 4 supported languages
+const botAnswers = {
+  trek: {
+    en: "Ahobilam has three main trekking routes:\n1. **Jwala Narasimha Trek**: Moderate 3-hour round trip through river beds and forest paths (Guide recommended).\n2. **Pavana Narasimha Trek**: Strenuous climb of 250 steep steps followed by 4 km forest walk (Jeep routes available).\n3. **Accessible Route**: Karanja, Yogananda, and Chatravata temples are easily reachable by road.",
+    te: "అహోబిలంలో మూడు ప్రధాన ట్రెక్కింగ్ మార్గాలు ఉన్నాయి:\n1. **జ్వాలా నరసింహ మార్గం**: నది పడకలు మరియు అటవీ మార్గాల గుండా వెళ్లే 3 గంటల ప్రయాణం (గైడ్ సిఫార్సు చేయబడింది).\n2. **పావన నరసింహ మార్గం**: 250 నిటారుగా ఉన్న మెట్లు ఎక్కిన తర్వాత 4 కి.మీ అటవీ నడక (జీపు సౌకర్యం ఉంది).\n3. **సులభమైన మార్గం**: కరంజ, యోగానంద మరియు ఛత్రవట ఆలయాలను రోడ్డు మార్గం ద్వారా సులభంగా చేరుకోవచ్చు.",
+    ta: "அகோபிலத்தில் மூன்று முக்கிய மலையேற்ற பாதைகள் உள்ளன:\n1. **ஜுவாலா நரசிம்மர் பாதை**: நதி படுக்கைகள் மற்றும் காட்டு பாதைகள் வழியாக 3 மணி நேர மலையேற்றம் (வழிகாட்டி பரிந்துரைக்கப்படுகிறது).\n2. **பாவன நரசிம்மர் பாதை**: 250 செங்குத்தான படிகள் ஏறி, பின் 4 கி.மீ காடு வழி நடை பயணம் (ஜீப் வசதி உள்ளது).\n3. **எளிதான பாதை**: கரஞ்சா, யோகானந்தா மற்றும் சத்ரவதா கோயில்களை சாலை வழியாக எளிதில் அடையலாம்.",
+    kn: "ಅಹೋಬಿಲಂನಲ್ಲಿ ಮೂರು ಪ್ರಮುಖ ಟ್ರೆಕ್ಕಿಂಗ್ ಮಾರ್ಗಗಳಿವೆ:\n1. **ಜ್ವಾಲಾ ನರಸಿಂಹ ಮಾರ್ಗ**: ನದಿ ತೀರ ಮತ್ತು ಅರಣ್ಯ ಮಾರ್ಗದ ಮೂಲಕ 3 ಗಂಟೆಗಳ ಪ್ರಯಾಣ (ಮಾರ್ಗದರ್ಶಿ ಶಿಫಾರಸು ಮಾಡಲಾಗಿದೆ).\n2. **ಪ್ರಮುಖ ಮಾರ್ಗ**: ಕಾರಂಜ, ಯೋಗಾನಂದ ಮತ್ತು ಛತ್ರವಟ ದೇವಾಲಯಗಳನ್ನು ರಸ್ತೆ ಮೂಲಕ ಸುಲಭವಾಗಿ ತಲುಪಬಹುದು."
+  },
+  timings: {
+    en: "The general temple timings are:\n- **Morning Darshan**: 6:30 AM – 1:00 PM\n- **Evening Darshan**: 4:00 PM – 8:00 PM\n- **Annadanam (Meals)**: 12:30 PM onwards\nNote: Upper Ahobilam forest shrines close by 5:00 PM for safety.",
+    te: "సాధారణ ఆలయ వేళలు:\n- **ఉదయం దర్శనం**: 6:30 AM – 1:00 PM\n- **సాయంత్రం దర్శనం**: 4:00 PM – 8:00 PM\n- **అన్నదానం**: 12:30 PM నుండి ప్రారంభం\nగమనిక: రక్షణ దృష్ట్యా ఎగువ అహోబిలం అటవీ ఆలయాలు సాయంత్రం 5:00 గంటలకు మూసివేయబడతాయి.",
+    ta: "பொதுவான தரிசன நேரங்கள்:\n- **காலை தரிசனம்**: காலை 6:30 - மதியம் 1:00\n- **மாலை தரிசனம்**: மாலை 4:00 - இரவு 8:00\n- **அன்னதானம்**: மதியம் 12:30 மணி முதல்\nகுறிப்பு: பாதுகாப்பு கருதி மேல் அகோபில காட்டு சன்னதிகள் மாலை 5:00 மணிக்குள் மூடப்படும்.",
+    kn: "ಸಾಮಾನ್ಯ ದೇವಾಲಯದ ಸಮಯಗಳು:\n- **ಬೆಳಗಿನ ದರ್ಶನ**: 6:30 AM – 1:00 PM\n- **ಸಂಜೆಯ ದರ್ಶನ**: 4:00 PM – 8:00 PM\n- **ಅನ್ನದಾನ**: ಮಧ್ಯಾಹ್ನ 12:30 ರಿಂದ\nಗಮನಿಸಿ: ಸುರಕ್ಷತೆಯ ದೃಷ್ಟಿಯಿಂದ ಮೇಲಿನ ಅಹೋಬಿಲಂ ಅರಣ್ಯ ದೇವಾಲಯಗಳು ಸಂಜೆ 5:00 ಗಂಟೆಗೆ ಮುಚ್ಚಲ್ಪಡುತ್ತವೆ."
+  },
+  stay: {
+    en: "Devasthanam provides accommodation options:\n- **Malola Guest House**: Standard rooms located near Lower Temple (Phone: 08519-252045).\n- **Haritha Hotel (APTDC)**: Deluxe AC/Non-AC rooms (Booking via APTDC portal).\n- **Sri Ahobila Mutt Guest House**: Nomination/donation-based pilgrim rooms (Phone: 08519-252024).",
+    te: "దేవస్థానం వసతి సౌకర్యాలు:\n- **మాలోల గెస్ట్ హౌస్**: దిగువ ఆలయ సమీపంలో గదులు (ఫోన్: 08519-252045).\n- **హరిత హోటల్ (APTDC)**: డీలక్స్ ఏసీ మరియు నాన్-ఏసీ గదులు (APTDC పోర్టల్ ద్వారా బుకింగ్).\n- **శ్రీ అహోబిల మఠం సత్రం**: సాంప్రదాయ గదులు (ఫోన్: 08519-252024).",
+    ta: "தேவஸ்தானம் தங்கும் வசதிகள்:\n- **மாலோலா விருந்தினர் இல்லம்**: கீழ் கோயில் அருகில் உள்ள சாதாரண அறைகள் (தொலைபேசி: 08519-252045).\n- **ஹரிதா ஹோட்டல் (APTDC)**: டீலக்ஸ் ஏசி/ஏசி அல்லாத அறைகள் (APTDC ஆன்லைன் தளம்).\n- **ஸ்ரீ அகோபில மடம் தங்கும் இல்லம்**: பாரம்பரிய யாத்ரீகர்கள் அறைகள் (தொலைபேசி: 08519-252024).",
+    kn: "ದೇವಸ್ಥಾನದ ವಸತಿ ಆಯ್ಕೆಗಳು:\n- **ಮಾಲೋಲ ಅತಿಥಿ ಗೃಹ**: ಕೆಳಗಿನ ದೇವಾಲಯದ ಹತ್ತಿರವಿರುವ ಕೊಠಡಿಗಳು (ದೂರವಾಣಿ: 08519-252045).\n- **ಹರಿತ ಹೋಟೆಲ್ (APTDC)**: ಡೀಲಕ್ಸ್ ಎಸಿ ಮತ್ತು ನಾನ್-ಎಸಿ ಕೊಠಡಿಗಳು (APTDC ಮೂಲಕ ಬುಕಿಂಗ್).\n- **ಶ್ರೀ ಅಹೋಬಿಲ ಮಠದ ಅತಿಥಿ ಗೃಹ**: ಸಾಂಪ್ರದಾಯಿಕ ಯಾತ್ರಿಕರ ಕೊಠಡಿಗಳು (ದೂರವಾಣಿ: 08519-252024)."
+  },
+  guide: {
+    en: "Registered forest guides are available to accompany you for treks to Jwala and Ugra Stambham. You can book them at the Lower Ahobilam guest house counter. Average guide charges are around ₹200–₹300.",
+    te: "జ్వాలా మరియు ఉగ్రస్తంభం ట్రెక్కింగ్ల కొరకు రిజిస్టర్డ్ ఫారెస్ట్ గైడ్లు అందుబాటులో ఉన్నారు. మీరు వారిని దిగువ అహోబిలం గెస్ట్ హౌస్ కౌంటర్ వద్ద బుక్ చేసుకోవచ్చు. సగటు రుసుము ₹200–₹300 ఉంటుంది.",
+    ta: "ஜுவாலா மற்றும் உக்கிர ஸ்தம்பம் மலையேற்றத்திற்கு பதிவு செய்யப்பட்ட வன வழிகாட்டிகள் உள்ளனர். கீழ் அகோபிலம் விருந்தினர் இல்ல கவுண்டரில் அவர்களை முன்பதிவு செய்யலாம். கட்டணம் தோராயமாக ₹200-₹300.",
+    kn: "ಜ್ವಾಲಾ ಮತ್ತು ಉಗ್ರ ಸ್ತಂಭದ ಟ್ರೆಕ್ಕಿಂಗ್‌ಗಾಗಿ ನೋಂದಾಯಿತ ಅರಣ್ಯ ಮಾರ್ಗದರ್ಶಿಗಳು ಲಭ್ಯವಿದ್ದಾರೆ. ಕೆಳಗಿನ ಅಹೋಬಿಲಂ ಅತಿಥಿ ಗೃಹದ ಕೌಂಟರ್‌ನಲ್ಲಿ ಅವರನ್ನು ಬುಕ್ ಮಾಡಬಹುದು. ಸರಾಸರಿ ಶುಲ್ಕ ₹೨೦೦–₹೩೦೦."
+  },
+  default: {
+    en: "Thank you for your message. For detailed inquiries, please use our contact form below or call the Devasthanam office at 08519-252045. May Lord Lakshmi Narasimha bless you! 🙏",
+    te: "మీ సమాచారానికి ధన్యవాదాలు. మరిన్ని వివరాల కోసం దయచేసి క్రింది సంప్రదింపు ఫారమ్‌ను ఉపయోగించండి లేదా దేవస్థానం కార్యాలయాన్ని 08519-252045 నంబరులో సంప్రదించండి. శ్రీ లక్ష్మీ నరసింహ స్వామి అనుగ్రహం మీకు కలుగుగాక! 🙏",
+    ta: "உங்கள் செய்திக்கு நன்றி. விரிவான விசாரணைகளுக்கு, கீழே உள்ள தொடர்பு படிவத்தைப் பயன்படுத்தவும் அல்லது தேவஸ்தான அலுவலகத்தை 08519-252045 என்ற எண்ணில் தொடர்பு கொள்ளவும். லட்சுமி நரசிம்மர் உங்களுக்கு அருள் புரிவாராக! 🙏",
+    kn: "ನಿಮ್ಮ ಸಂದೇಶಕ್ಕೆ ಧನ್ಯವಾದಗಳು. ವಿವರವಾದ ವಿಚಾರಣೆಗಾಗಿ, ದಯವಿಟ್ಟು ಕೆಳಗಿನ ಸಂಪರ್ಕ ಫಾರ್ಮ್ ಬಳಸಿ ಅಥವಾ ದೇವಸ್ಥಾನದ ಕಚೇರಿಯನ್ನು 08519-252045 ಸಂಪರ್ಕಿಸಿ. ಶ್ರೀ ಲಕ್ಷ್ಮಿ ನರಸಿಂಹ ಸ್ವಾಮಿ ನಿಮಗೆ ಒಳಿತನ್ನು ಮಾಡಲಿ! 🙏"
+  }
+};
+
+function getActiveLanguage() {
+  const select = document.getElementById('lang-select');
+  return select ? select.value : 'en';
+}
+
+function appendMessage(text, sender) {
+  const log = document.getElementById('chatLog');
+  if (!log) return;
+  const msgDiv = document.createElement('div');
+  msgDiv.className = `chat-msg ${sender}`;
+  msgDiv.innerHTML = `<p>${text.replace(/\n/g, '<br>')}</p>`;
+  log.appendChild(msgDiv);
+  log.scrollTop = log.scrollHeight;
+}
+
+function handleChipClick(category, element) {
+  event.preventDefault();
+  event.stopPropagation();
+  const lang = getActiveLanguage();
+  const userText = element.textContent;
+  
+  // Append user chip message
+  appendMessage(userText, 'user');
+  
+  // Show typing indicator
+  showTypingIndicator();
+  
+  setTimeout(() => {
+    removeTypingIndicator();
+    const botText = botAnswers[category] ? botAnswers[category][lang] : botAnswers['default'][lang];
+    appendMessage(botText, 'bot');
+  }, 1000);
+}
+
+function handleChatSubmit(e) {
+  e.preventDefault();
+  const input = document.getElementById('chatInput');
+  if (!input || !input.value.trim()) return;
+  
+  const text = input.value.trim();
+  input.value = '';
+  
+  appendMessage(text, 'user');
+  showTypingIndicator();
+  
+  setTimeout(() => {
+    removeTypingIndicator();
+    const lang = getActiveLanguage();
+    let reply = botAnswers['default'][lang];
+    
+    // Simple keyword matching for bot replies
+    const lower = text.toLowerCase();
+    if (lower.includes('trek') || lower.includes('route') || lower.includes('climb') || lower.includes('way')) {
+      reply = botAnswers['trek'][lang];
+    } else if (lower.includes('time') || lower.includes('darshan') || lower.includes('open') || lower.includes('close')) {
+      reply = botAnswers['timings'][lang];
+    } else if (lower.includes('stay') || lower.includes('room') || lower.includes('hotel') || lower.includes('guest') || lower.includes('hostel')) {
+      reply = botAnswers['stay'][lang];
+    } else if (lower.includes('guide') || lower.includes('book guide') || lower.includes('help')) {
+      reply = botAnswers['guide'][lang];
+    }
+    
+    appendMessage(reply, 'bot');
+  }, 1000);
+}
+
+function showTypingIndicator() {
+  const log = document.getElementById('chatLog');
+  if (!log) return;
+  const indicator = document.createElement('div');
+  indicator.className = 'chat-msg bot typing-indicator-wrap';
+  indicator.id = 'typingIndicator';
+  indicator.innerHTML = `
+    <div class="typing-indicator">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+  `;
+  log.appendChild(indicator);
+  log.scrollTop = log.scrollHeight;
+}
+
+function removeTypingIndicator() {
+  const indicator = document.getElementById('typingIndicator');
+  if (indicator) indicator.remove();
 }
 

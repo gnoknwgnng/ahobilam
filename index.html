@@ -1228,7 +1228,7 @@
 </div>
 
 <!-- FLOATING 3D MODEL BADGE -->
-<div class="floating-3d-model">
+<div class="floating-3d-model" onclick="toggleChat()">
   <model-viewer 
     src="https://raw.githubusercontent.com/gnoknwgnng/ahobilam/main/pralodha.glb" 
     alt="Sri Lakshmi Narasimha Swamy 3D Model" 
@@ -1237,6 +1237,35 @@
     loading="eager"
     style="width: 100%; height: 100%; background-color: transparent;">
   </model-viewer>
+</div>
+
+<!-- FLOATING CHAT WIDGET -->
+<div class="chat-widget" id="chatWidget">
+  <div class="chat-header">
+    <div class="chat-title-block">
+      <span class="chat-avatar">🕉</span>
+      <div class="chat-details">
+        <h4 data-en="Devasthanam Guide" data-te="దేవస్థానం సహాయకుడు" data-ta="தேவஸ்தான வழிகாட்டி" data-kn="ದೇವಸ್ಥಾನ ಮಾರ್ಗದರ್ಶಿ">Devasthanam Guide</h4>
+        <span class="chat-status" data-en="Online" data-te="ఆన్‌లైన్" data-ta="ஆன்லைன்" data-kn="ಆನ್‌ಲೈನ್">Online</span>
+      </div>
+    </div>
+    <button class="chat-close-btn" onclick="toggleChat()" aria-label="Close Chat">✕</button>
+  </div>
+  <div class="chat-log" id="chatLog">
+    <div class="chat-msg bot">
+      <p data-en="Pranam! Welcome to Sri Ahobilam Devasthanam. I can assist you with information about the temples, timings, accommodation, and trekking routes. What would you like to know?" data-te="ప్రణామం! శ్రీ అహోబిలం దేవస్థానానికి స్వాగతం. ఆలయాలు, వేళలు, వసతి మరియు ట్రెక్కింగ్ మార్గాల గురించిన వివరాల కోసం నేను మీకు సహాయం చేయగలను. మీకేం తెలుసుకోవాలి?" data-ta="பிரணாமம்! ஸ்ரீ அகோபிலம் தேவஸ்தானத்திற்கு உங்களை வரவேற்கிறோம். கோயில்கள், தரிசன நேரங்கள், தங்கும் வசதிகள் மற்றும் மலையேற்ற பாதைகள் பற்றிய தகவல்களை வழங்க நான் உதவ முடியும். நீங்கள் என்ன அறிய விரும்புகிறீர்கள்?" data-kn="ಪ್ರಣಾಮಗಳು! ಶ್ರೀ ಅಹೋಬಿಲಂ ದೇವಸ್ಥಾನಕ್ಕೆ ನಿಮಗೆ ಸುಸ್ವಾಗತ. ದೇವಸ್ಥಾನಗಳು, ಸಮಯಗಳು, ವಸತಿ ಮತ್ತು ಟ್ರೆಕ್ಕಿಂಗ್ ಮಾರ್ಗಗಳ ಬಗ್ಗೆ ಮಾಹಿತಿ ನೀಡಲು ನಾನು ನಿಮಗೆ ಸಹಾಯ ಮಾಡಬಲ್ಲೆ. ನೀವು ಏನನ್ನು ತಿಳಿಯಲು ಬಯಸುತ್ತೀರಿ?">Pranam! Welcome to Sri Ahobilam Devasthanam. I can assist you with information about the temples, timings, accommodation, and trekking routes. What would you like to know?</p>
+      <div class="chat-chips">
+        <button class="chat-chip" onclick="handleChipClick('trek', this)" data-en="🥾 Trekking Routes" data-te="🥾 ట్రెక్కింగ్ మార్గాలు" data-ta="🥾 மலையேற்ற பாதைகள்" data-kn="🥾 ಟ್ರೆಕ್ಕಿಂಗ್ ಮಾರ್ಗಗಳು">🥾 Trekking Routes</button>
+        <button class="chat-chip" onclick="handleChipClick('timings', this)" data-en="⏰ Darshan Timings" data-te="⏰ దర్శన వేళలు" data-ta="⏰ தரிசன நேரங்கள்" data-kn="⏰ ದರ್ಶನ ಸಮಯಗಳು">⏰ Darshan Timings</button>
+        <button class="chat-chip" onclick="handleChipClick('stay', this)" data-en="🛏 Accommodation" data-te="🛏 వసతి సౌకర్యాలు" data-ta="🛏 தங்கும் வசதி" data-kn="🛏 ವಸತಿ ಸೌಕರ್ಯಗಳು">🛏 Accommodation</button>
+        <button class="chat-chip" onclick="handleChipClick('guide', this)" data-en="🙏 Book a Guide" data-te="🙏 గైడ్ సేవలు" data-ta="🙏 வழிகாட்டி முன்பதிவு" data-kn="🙏 ಮಾರ್ಗದರ್ಶಿ ಬುಕಿಂಗ್">🙏 Book a Guide</button>
+      </div>
+    </div>
+  </div>
+  <form class="chat-input-area" onsubmit="handleChatSubmit(event)">
+    <input type="text" class="chat-input" id="chatInput" placeholder="Type your question here…" data-en-placeholder="Type your question here…" data-te-placeholder="ఇక్కడ మీ ప్రశ్నను టైప్ చేయండి…" data-ta-placeholder="உங்கள் கேள்வியை இங்கே தட்டச்சு செய்க…" data-kn-placeholder="ನಿಮ್ಮ ಪ್ರಶ್ನೆಯನ್ನು ಇಲ್ಲಿ ಟೈಪ್ ಮಾಡಿ…">
+    <button type="submit" class="chat-send-btn">➤</button>
+  </form>
 </div>
 
 <script src="app.js"></script>
