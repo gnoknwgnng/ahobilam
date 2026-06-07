@@ -2425,27 +2425,19 @@ h1, h2, h3, h4, h5 {
   animation: slideInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1);
   transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275), box-shadow 0.3s ease;
   overflow: visible; /* To allow tooltip and model to pop out slightly */
+  pointer-events: auto !important; /* Force clicks on container */
+}
+.floating-3d-model * {
+  pointer-events: none !important; /* Let clicks pass directly through to parent container */
 }
 .floating-3d-model model-viewer {
   width: 100%;
   height: 100%;
   display: block;
-  pointer-events: none; /* Let clicks pass through to click-overlay */
 }
 .floating-3d-model:hover {
   transform: scale(1.1) rotate(3deg);
   box-shadow: 0 15px 35px rgba(212, 175, 55, 0.4), inset 0 0 20px rgba(212, 175, 55, 0.5);
-}
-.model-click-overlay {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 10;
-  border-radius: 50%;
-  cursor: pointer;
-  background: rgba(0, 0, 0, 0.001); /* Invisible but fully clickable */
 }
 .floating-badge-bg {
   position: absolute;
