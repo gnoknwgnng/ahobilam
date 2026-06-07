@@ -1230,13 +1230,19 @@
 <!-- FLOATING 3D MODEL BADGE -->
 <div class="floating-3d-model" onclick="toggleChat()">
   <model-viewer 
-    src="https://raw.githubusercontent.com/gnoknwgnng/ahobilam/main/pralodha.glb" 
+    id="pralodhaModel"
+    src="pralodha.glb" 
     alt="Sri Lakshmi Narasimha Swamy 3D Model" 
     shadow-intensity="1.5" 
     interaction-prompt="none"
     loading="eager"
     style="width: 100%; height: 100%; background-color: transparent;">
   </model-viewer>
+  <script>
+    if (window.location.protocol === 'file:') {
+      document.getElementById('pralodhaModel').setAttribute('src', 'https://raw.githubusercontent.com/gnoknwgnng/ahobilam/main/pralodha.glb');
+    }
+  </script>
 </div>
 
 <!-- FLOATING CHAT WIDGET -->

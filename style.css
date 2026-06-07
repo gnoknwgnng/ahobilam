@@ -2424,6 +2424,9 @@ h1, h2, h3, h4, h5 {
   animation: slideInUp 1.2s cubic-bezier(0.16, 1, 0.3, 1);
   transition: transform 0.3s ease;
 }
+.floating-3d-model model-viewer {
+  pointer-events: none; /* Let clicks pass through to parent container */
+}
 .floating-3d-model:hover {
   transform: scale(1.08); /* Micro-animation on hover */
 }
